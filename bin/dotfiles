@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+
+sub_help () {
+  echo "Usage: $BIN_NAME <command>"
+  echo
+  echo "Commands:"
+  echo "   clean            Clean up caches (brew, npm)"
+  echo "   help             This help message"
+  echo "   test             Run tests"
+  echo "   update           Update packages and pkg managers (brew, brew cask, npm)"
+}
+
+sub_test () {
+  bats "$DOTFILES_DIR"/test/*.bats
+}
+
+sub_update () {
+  echo "Updating brew"
+  echo
+  brew update
+  echo "Upgrading brew packages"
+  echo
+  brew upgrade
+  echo "Upgrading brew cask packages"
+  echo
+  brew cu
+  echo "Upgrading global npm"
+  echo
+  npm install npm -g
+  echo "Upgrading npm global packages"
+  echo
+  npm update -g
+}
+
+sub_clean () {
+  echo "Cleaning brew"
+  echo
+  brew cleanup
+  echo "Cleaning brew cask"
+  echo
+  brew cask cleanup
+  echo "Cleaning npm"
+  echo
+  npm cache clean --force
+}
+
+case $COMMAND_NAME in
+  "" | "-h" | "--help")
+    sub_help
+    ;;
+  *)
+    shift
+    sub_${COMMAND_NAME} $@
+    if [ $? = 127 ]; then
+      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
+      sub_help
+      exit 1
+    fi
+    ;;
+esac
