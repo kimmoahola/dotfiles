@@ -32,7 +32,7 @@
   st = status
   stl = ls-files -m -o --exclude-standard
   sts = status -sb
-  unstage = reset --hard HEAD
+  unstage = reset HEAD
 
 [color]
   ui = auto

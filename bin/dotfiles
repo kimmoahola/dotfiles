@@ -9,12 +9,7 @@ sub_help () {
   echo "Commands:"
   echo "   clean            Clean up caches (brew, npm)"
   echo "   help             This help message"
-  echo "   test             Run tests"
   echo "   update           Update packages and pkg managers (brew, brew cask, npm)"
-}
-
-sub_test () {
-  bats "$DOTFILES_DIR"/test/*.bats
 }
 
 sub_update () {
@@ -33,6 +28,9 @@ sub_update () {
   echo "Upgrading npm global packages"
   echo
   npm update -g
+  echo
+  echo "Now please run 'omf update' manually, and refresh by open a new shell"
+  echo
 }
 
 sub_clean () {

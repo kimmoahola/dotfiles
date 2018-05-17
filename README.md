@@ -7,7 +7,7 @@ It targets macOS systems, but it may work on *nix as well.
 ## Package overview
 
 * Core
-  * Bash + [coreutils](https://en.wikipedia.org/wiki/GNU_Core_Utilities) + bash-completion2
+  * Fish shell + [coreutils](https://en.wikipedia.org/wiki/GNU_Core_Utilities)
   * [Homebrew](https://brew.sh) + [homebrew-cask](https://caskroom.github.io)
   * Node.js + npm
   * GNU [sed](https://www.gnu.org/software/sed/), [grep](https://www.gnu.org/software/grep/), [Wget](https://www.gnu.org/software/wget/)
@@ -38,13 +38,26 @@ Install the dotfiles with either Git or curl/wget:
 
 Alternatively, you can install this into `~/.dotfiles` remotely without Git using curl:
 
-    bash -c "`curl -fsSL https://raw.github.com/termopetteri/dotfiles/master/remote-install.sh`"
+    bash -c "`curl -fsSL https://raw.github.com/termopetteri/dotfiles/fish/remote-install.sh`"
 
 Or, using wget:
 
-    bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/termopetteri/dotfiles/master/remote-install.sh`"
+    bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/termopetteri/dotfiles/fish/remote-install.sh`"
 
 The instalation is designed to be idempotent, meaning it can be run again.
+
+### Install oh-my-fish and the theme
+
+Open a new shell and run `curl -L https://get.oh-my.fish | fish` and `omf install bobthefish`
+
+### Install powerline font
+
+For example the Noto Mono for Powerline from https://github.com/powerline/fonts
+
+### Adjust iTerm settings
+
+1. Select the powerline font 14pt and same font for non-ASCII text but 13pt.
+2.
 
 ## The `dotfiles` command
 
@@ -54,7 +67,6 @@ The instalation is designed to be idempotent, meaning it can be run again.
     Commands:
     clean            Clean up caches (brew, npm)
     help             This help message
-    test             Run tests
     update           Update packages and pkg managers (brew, brew cask, npm)
 
 ## Customize/extend

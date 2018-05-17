@@ -18,6 +18,8 @@ apps=(
   coreutils
   diff-so-fancy
   ffmpeg
+  findutils
+  fish
   git
   git-extras
   gnu-tar --with-default-names
