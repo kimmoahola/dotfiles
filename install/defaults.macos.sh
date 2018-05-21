@@ -63,6 +63,10 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Mouse speed
+defaults write NSGlobalDomain com.apple.mouse.scaling 2.5
+defaults write NSGlobalDomain com.apple.trackpad.scaling 1
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -126,6 +130,10 @@ defaults write com.apple.dock launchanim -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Remove default stuff
+defaults delete com.apple.dock persistent-apps
+defaults delete com.apple.dock persistent-others
 
 ###############################################################################
 # Dashboard                                                                   #

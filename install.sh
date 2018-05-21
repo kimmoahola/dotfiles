@@ -64,7 +64,7 @@ if [ -d "$DOTFILES_EXTRA_DIR" ] && [ -f "$DOTFILES_EXTRA_DIR/install.sh" ]; then
 fi
 
 echo
-echo "Lastly run 'curl -L https://get.oh-my.fish | fish' and 'omf install bobthefish' on a new shell"
+echo "Lastly run 'curl -L https://get.oh-my.fish | fish' in this shell. And then open a new shell and run 'omf install bobthefish'"
 echo
 echo "Some changes may require a restart to take effect."
 echo
