@@ -17,6 +17,7 @@ apps=(
   google-chrome-canary
   insomnia
   iterm2
+  pycharm
   skitch
   sourcetree
   spectacle
