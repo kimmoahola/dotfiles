@@ -42,6 +42,9 @@ ln -sfv "$DOTFILES_DIR/configs/htoprc" "$HOME/.config/htop"
 if is-macos; then
   mkdir -p "$HOME/Library/Application Support/Code/User"
   ln -sfv "$DOTFILES_DIR/configs/vscode.json" "$HOME/Library/Application Support/Code/User/settings.json"
+
+  mkdir -p "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
+  ln -sfv "$DOTFILES_DIR/configs/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
 fi
 
 # Package managers & packages
