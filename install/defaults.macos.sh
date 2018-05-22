@@ -230,6 +230,12 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
+# Date/Time
+###############################################################################
+
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  H.mm"
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
