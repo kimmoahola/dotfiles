@@ -67,6 +67,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain com.apple.mouse.scaling 2.5
 defaults write NSGlobalDomain com.apple.trackpad.scaling 1
 
+# Bluetooth to the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 1
+defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -233,6 +237,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Date/Time
 ###############################################################################
 
+# Show also the date in menu bar
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  H.mm"
 
 ###############################################################################
