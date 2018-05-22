@@ -54,11 +54,6 @@ Open a new shell and run `curl -L https://get.oh-my.fish | fish` and `omf instal
 
 For example the Noto Mono for Powerline from https://github.com/powerline/fonts
 
-### Adjust iTerm settings
-
-1. Select the powerline font 14pt and same font for non-ASCII text but 13pt.
-2.
-
 ## The `dotfiles` command
 
     $ dotfiles help
