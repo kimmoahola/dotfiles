@@ -68,7 +68,7 @@ For example the Noto Mono for Powerline from https://github.com/powerline/fonts
 
 Custom installation step can be put into `$HOME/.dotfiles_extra/install.sh`. That will be sourced last in the installation.
 
-`$HOME/.dotfiles_extra/runcom/*.sh` will be sources from `.bash_profile`. You can put your custom settings, such as credentials in there.
+`$HOME/.dotfiles_extra/runcom/*.fish` will be sources from `config.fish`. You can put your custom settings, such as credentials in there.
 
 ## Credits
 
