@@ -19,7 +19,9 @@ end
 
 # Make utilities available
 
-set -x -g PATH $DOTFILES_DIR/bin $PATH
+if status --is-login
+  set -x -g PATH $DOTFILES_DIR/bin $PATH
+end
 
 # Read cache
 
