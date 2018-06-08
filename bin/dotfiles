@@ -29,7 +29,7 @@ sub_update () {
   echo
   npm update -g
   echo
-  echo "Now please run 'omf update' manually, and refresh by open a new shell"
+  echo "Now please run 'omf update' manually, and refresh by opening a new shell"
   echo
 }
 
