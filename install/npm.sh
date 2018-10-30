@@ -24,9 +24,14 @@ nvm use default
 # Globally install with npm
 
 packages=(
+  eslint
+  eslint-config-airbnb-base
+  eslint-config-prettier
+  eslint-plugin-import
   get-port-cli
   nodemon
   npm
+  prettier
   release-it
   spot
   superstatic

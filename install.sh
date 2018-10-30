@@ -47,6 +47,8 @@ if is-macos; then
   ln -sfv "$DOTFILES_DIR/configs/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
 fi
 
+ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
+
 # Package managers & packages
 
 . "$DOTFILES_DIR/install/brew.sh"
