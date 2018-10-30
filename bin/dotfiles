@@ -16,18 +16,24 @@ sub_update () {
   echo "Updating brew"
   echo
   brew update
+
   echo "Upgrading brew packages"
   echo
   brew upgrade
+
   echo "Upgrading brew cask packages"
   echo
   brew cu
-  echo "Upgrading global npm"
+
+  echo "Upgrading node"
   echo
-  npm install npm -g
+  nvm install 10
+  nvm use 10
+
   echo "Upgrading npm global packages"
   echo
   npm update -g
+
   echo
   echo "Now please run 'omf update' manually, and refresh by opening a new shell"
   echo
