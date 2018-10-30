@@ -33,6 +33,7 @@ apps=(
   jq
   nano
   peco
+  pyenv
   python
   screen
   shellcheck
