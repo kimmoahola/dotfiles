@@ -1,23 +1,26 @@
 {
-    "files.trimTrailingWhitespace": true,
-    "files.autoSave": "onFocusChange",
-    "window.zoomLevel": 0,
-    "files.insertFinalNewline": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.tabSize": 2,
-    "editor.minimap.enabled": true,
-    "editor.rulers": [
-        120
-    ],
-    "editor.minimap.showSlider": "always",
-    "workbench.editor.revealIfOpen": true,
-    "tslint.exclude": "node_modules",
-    "cSpell.userWords": [
-        "scroller"
-    ],
-    "editor.fontFamily": "Input, Menlo, Monaco, 'Courier New', monospace",
-    "workbench.editor.labelFormat": "short",
-    "editor.minimap.side": "left",
-    "flow.useNPMPackagedFlow": true,
-    "flow.runOnAllFiles": true
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": true,
+  "editor.rulers": [120],
+  "editor.minimap.showSlider": "always",
+  "workbench.editor.revealIfOpen": true,
+  "tslint.exclude": "node_modules",
+  "editor.fontFamily": "Input, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.editor.labelFormat": "short",
+  "editor.minimap.side": "left",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "gitlens.gitExplorer.files.layout": "auto",
+  "breadcrumbs.enabled": true,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
+  "window.zoomLevel": 0,
+  "tslint.autoFixOnSave": true
 }
