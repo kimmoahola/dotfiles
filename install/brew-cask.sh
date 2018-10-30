@@ -11,6 +11,7 @@ brew tap buo/cask-upgrade
 # Install packages
 
 apps=(
+  docker
   firefox
   font-input
   google-chrome

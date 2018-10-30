@@ -17,6 +17,9 @@ apps=(
   bats
   coreutils
   diff-so-fancy
+  docker-completion
+  docker-compose-completion
+  docker-machine-completion
   ffmpeg
   findutils
   fish
