@@ -1,6 +1,5 @@
 # Shortcuts
 
-alias reload="source ~/.bash_profile"
 alias _="sudo"
 
 alias g="git"
