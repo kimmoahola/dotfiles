@@ -17,8 +17,9 @@ fi
 
 ln -sfv "$DOTFILES_BREW_PREFIX_NVM/nvm.sh" "$HOME/.nvm"
 
-nvm install 8
-nvm alias default 8
+nvm install 10
+nvm alias default 10
+nvm use default
 
 # Globally install with npm
 
