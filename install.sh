@@ -56,6 +56,7 @@ ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
 . "$DOTFILES_DIR/install/bash.sh"
 . "$DOTFILES_DIR/install/fish.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
+. "$DOTFILES_DIR/install/vscode.sh"
 
 # # MacOS defaults
 
