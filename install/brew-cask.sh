@@ -3,31 +3,31 @@ if ! is-macos -o ! is-executable brew; then
   return
 fi
 
-brew tap caskroom/versions
 brew tap caskroom/cask
-brew tap caskroom/fonts
 brew tap buo/cask-upgrade
 
 # Install packages
 
 apps=(
+  docker
   firefox
   font-input
   google-chrome
   google-chrome-canary
   insomnia
   iterm2
+  pycharm
   skitch
   sourcetree
   spectacle
   spotify
+  tunnelblick
+  vagrant
   virtualbox
   visual-studio-code
 )
 
-for app in "${apps[@]}"; do
-	brew cask install "${app}"
-done
+brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 quick_look_apps=(
@@ -41,8 +41,4 @@ quick_look_apps=(
   qlvideo
 )
 
-for app in "${quick_look_apps[@]}"; do
-	brew cask install "${app}"
-done
-
-brew cask cleanup
+brew cask install "${quick_look_apps[@]}"

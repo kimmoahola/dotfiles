@@ -7,7 +7,7 @@ FILE="$3"
 touch "$FILE"
 
 if grep -q "$1=" "$FILE"; then
-  sed "s@$KEY=.*@$KEY=\"$VALUE\"@" -i "$FILE"
+  sed "s@$KEY .*@$KEY \"$VALUE\"@" -i "$FILE"
 else
-  echo "export $KEY=\"$VALUE\"" >> "$FILE"
+  echo "set -g -x $KEY \"$VALUE\"" >> "$FILE"
 fi

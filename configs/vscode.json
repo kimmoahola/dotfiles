@@ -1,0 +1,30 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": true,
+  "editor.rulers": [120],
+  "editor.minimap.showSlider": "always",
+  "workbench.editor.revealIfOpen": true,
+  "tslint.exclude": "node_modules",
+  "editor.fontFamily": "Input, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.editor.labelFormat": "short",
+  "editor.minimap.side": "left",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.gitExplorer.files.layout": "auto",
+  "breadcrumbs.enabled": true,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
+  "window.zoomLevel": 0,
+  "tslint.autoFixOnSave": true,
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.codeLens.enabled": false,
+  "python.jediEnabled": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}

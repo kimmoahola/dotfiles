@@ -1,63 +1,66 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-BIN_NAME=$(basename "$0")
-COMMAND_NAME=$1
+set -l COMMAND_NAME $argv[1]
 
-sub_help () {
-  echo "Usage: $BIN_NAME <command>"
+function sub_help
+  echo "Usage: dotfiles <command>"
   echo
   echo "Commands:"
   echo "   clean            Clean up caches (brew, npm)"
-  echo "   help             This help message"
-  echo "   test             Run tests"
   echo "   update           Update packages and pkg managers (brew, brew cask, npm)"
-}
+end
 
-sub_test () {
-  bats "$DOTFILES_DIR"/test/*.bats
-}
-
-sub_update () {
-  echo "Updating brew"
+function sep -a text
   echo
+  seq -f '' -s= -t\n 120
+  echo $text
+  echo
+end
+
+function sub_update
+  sep "Updating brew"
   brew update
-  echo "Upgrading brew packages"
-  echo
+
+  sep "Upgrading brew packages"
   brew upgrade
-  echo "Upgrading brew cask packages"
-  echo
+
+  sep "Reinstall pipenv (so it works if python was upgraded)"
+  brew reinstall pipenv
+
+  sep "Upgrading brew cask packages"
   brew cu
-  echo "Upgrading global npm"
-  echo
-  npm install npm -g
-  echo "Upgrading npm global packages"
-  echo
+
+  sep "Upgrading node"
+  curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > $HOME/.config/fish/functions/nvm.fish
+  nvm install 10
+  nvm use 10
+
+  sep "Upgrading npm global packages"
   npm update -g
-}
 
-sub_clean () {
-  echo "Cleaning brew"
-  echo
+  sep "Upgrading oh my fish"
+  omf update
+
+  sep "Now refresh by opening a new shell"
+end
+
+function sub_clean
+  sep "Cleaning brew"
   brew cleanup
-  echo "Cleaning brew cask"
-  echo
-  brew cask cleanup
-  echo "Cleaning npm"
-  echo
-  npm cache clean --force
-}
 
-case $COMMAND_NAME in
-  "" | "-h" | "--help")
-    sub_help
-    ;;
-  *)
-    shift
-    sub_${COMMAND_NAME} $@
-    if [ $? = 127 ]; then
-      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
-      sub_help
-      exit 1
-    fi
-    ;;
-esac
+  sep "Cleaning npm"
+  npm cache clean --force
+end
+
+if [ -z "$argv" ];
+  sub_help
+  exit 1
+end
+
+switch $COMMAND_NAME
+  case update
+    sub_update
+  case clean
+    sub_clean
+end
+
