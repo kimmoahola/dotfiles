@@ -35,11 +35,11 @@ Install the dotfiles with either Git or curl/wget:
 
 Alternatively, you can install this into `~/.dotfiles` remotely without Git using curl:
 
-    bash -c "`curl -fsSL https://raw.github.com/kimmoahola/dotfiles/fish/remote-install.sh`"
+    bash -c "`curl -fsSL https://raw.github.com/kimmoahola/dotfiles/master/remote-install.sh`"
 
 Or, using wget:
 
-    bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/kimmoahola/dotfiles/fish/remote-install.sh`"
+    bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/kimmoahola/dotfiles/master/remote-install.sh`"
 
 The instalation is designed to be idempotent, meaning it can be run again.
 
