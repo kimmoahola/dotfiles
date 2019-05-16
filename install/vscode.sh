@@ -10,11 +10,12 @@ extensions=(
   NuclleaR.vscode-extension-auto-import
   oderwat.indent-rainbow
   pflannery.vscode-versionlens
-  robertohuertasm.vscode-icons
+  vscode-icons-team.vscode-icons
   samuelcolvin.jinjahtml
   skyapps.fish-vscode
   wayou.vscode-todo-highlight
   wix.vscode-import-cost
+  visualstudioexptteam.vscodeintellicode
 )
 
 for ext in "${extensions[@]}"; do

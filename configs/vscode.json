@@ -15,12 +15,16 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
-  "workbench.iconTheme": "vscode-icons",
   "gitlens.gitExplorer.files.layout": "auto",
   "breadcrumbs.enabled": true,
   "editor.formatOnSave": true,
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
   "window.zoomLevel": 0,
-  "tslint.autoFixOnSave": true
+  "tslint.autoFixOnSave": true,
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.codeLens.enabled": false,
+  "python.jediEnabled": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

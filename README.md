@@ -2,22 +2,19 @@
 
 These are my dotfiles. Installation script will install various software and setup the shell to be my style. Also some macOS settings are modified.
 
-It targets macOS systems, but it may work on *nix as well.
+It targets macOS systems, but it may work on \*nix as well.
 
 ## Package overview
 
-* Core
-  * Fish shell + [coreutils](https://en.wikipedia.org/wiki/GNU_Core_Utilities)
-  * [Homebrew](https://brew.sh) + [homebrew-cask](https://caskroom.github.io)
-  * Node.js + npm
-  * GNU [sed](https://www.gnu.org/software/sed/), [grep](https://www.gnu.org/software/grep/), [Wget](https://www.gnu.org/software/wget/)
-  * [spot](https://github.com/guille/spot), [tree](http://mama.indstate.edu/users/ice/tree/), [htop](https://github.com/hishamhm/htop)
-  * Git + [SourceTree](https://www.sourcetreeapp.com)
-  * Python 2
-* Development (Node/JS/JSON): [jq](https://stedolan.github.io/jq), [nodemon](https://nodemon.io), [peco](https://peco.github.io), [superstatic](https://github.com/firebase/superstatic), [underscore-cli](https://github.com/ddopson/underscore-cli)
-* macOS: [Quick Look plugins](https://github.com/sindresorhus/quick-look-plugins)
-* [macOS apps](https://github.com/kimmoahola/dotfiles/blob/master/install/brew-cask.sh)
-* [macOS settings](https://github.com/kimmoahola/dotfiles/blob/master/install/defaults.macos.sh)
+- Core
+  - Fish shell + [coreutils](https://en.wikipedia.org/wiki/GNU_Core_Utilities)
+  - [Homebrew](https://brew.sh) + [homebrew-cask](https://caskroom.github.io)
+  - Node.js + npm
+  - GNU [sed](https://www.gnu.org/software/sed/), [grep](https://www.gnu.org/software/grep/), [Wget](https://www.gnu.org/software/wget/)
+- Development (Node/JS/JSON): [jq](https://stedolan.github.io/jq), [nodemon](https://nodemon.io), [peco](https://peco.github.io), [superstatic](https://github.com/firebase/superstatic), [underscore-cli](https://github.com/ddopson/underscore-cli)
+- macOS: [Quick Look plugins](https://github.com/sindresorhus/quick-look-plugins)
+- [macOS apps](https://github.com/kimmoahola/dotfiles/blob/master/install/brew-cask.sh)
+- [macOS settings](https://github.com/kimmoahola/dotfiles/blob/master/install/defaults.macos.sh)
 
 ## Install
 
@@ -32,7 +29,7 @@ Install the dotfiles with either Git or curl/wget:
 ### Clone with Git
 
     git clone https://github.com/kimmoahola/dotfiles.git ~/.dotfiles
-    source ~/.dotfiles/install.sh
+    bash ~/.dotfiles/install.sh
 
 ### Remotely install using curl
 

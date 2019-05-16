@@ -25,14 +25,15 @@ apps=(
   fish
   git
   git-extras
-  gnu-tar --with-default-names
-  gnu-sed --with-default-names
-  grep --with-default-names
+  gnu-tar
+  gnu-sed
+  grep
   htop
   httpie
   jq
   nano
   peco
+  pipenv
   pyenv
   python
   screen
@@ -40,12 +41,15 @@ apps=(
   ssh-copy-id
   tree
   unar
-  wget --with-iri
+  wget
 )
 
 brew install "${apps[@]}"
 
 brew cleanup
+
+# Disable pipenv prompt
+set-config "VIRTUAL_ENV_DISABLE_PROMPT" "1" "$DOTFILES_CACHE"
 
 export DOTFILES_BREW_PREFIX_COREUTILS=`brew --prefix coreutils`
 set-config "DOTFILES_BREW_PREFIX_COREUTILS" "$DOTFILES_BREW_PREFIX_COREUTILS" "$DOTFILES_CACHE"
@@ -55,6 +59,9 @@ set-config "DOTFILES_BREW_PREFIX_GNU_SED" "$DOTFILES_BREW_PREFIX_GNU_SED" "$DOTF
 
 export DOTFILES_BREW_PREFIX_GNU_TAR=`brew --prefix gnu-tar`
 set-config "DOTFILES_BREW_PREFIX_GNU_TAR" "$DOTFILES_BREW_PREFIX_GNU_TAR" "$DOTFILES_CACHE"
+
+export DOTFILES_BREW_PREFIX_GNU_GREP=`brew --prefix grep`
+set-config "DOTFILES_BREW_PREFIX_GNU_GREP" "$DOTFILES_BREW_PREFIX_GNU_GREP" "$DOTFILES_CACHE"
 
 export DOTFILES_BREW_PREFIX=`brew --prefix`
 set-config "DOTFILES_BREW_PREFIX" "$DOTFILES_BREW_PREFIX" "$DOTFILES_CACHE"
