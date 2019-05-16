@@ -68,7 +68,5 @@ if [ -d "$DOTFILES_EXTRA_DIR" ] && [ -f "$DOTFILES_EXTRA_DIR/install.sh" ]; then
 fi
 
 echo
-echo "Lastly open a new shell and run 'omf install bobthefish'"
-echo
 echo "Some changes may require a restart to take effect."
 echo
