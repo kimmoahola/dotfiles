@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+if ! is-macos; then
+  return
+fi
+
 # Echo commands
 set -x
 

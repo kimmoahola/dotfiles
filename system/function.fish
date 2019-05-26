@@ -1,7 +1,7 @@
 
 function prepend-path
   if test -d $argv
-    if status --is-login
+    if status is-interactive
       set -x -g PATH $argv $PATH
     end
   end

@@ -4,7 +4,7 @@ set -x -g TERM "xterm-256color"
 
 # If not running interactively, don't do anything
 
-if not status --is-interactive
+if not status is-interactive
   exit
 end
 
@@ -19,9 +19,9 @@ end
 
 # Make utilities available
 
-if status --is-login
+#if status is-login
   set -x -g PATH $DOTFILES_DIR/bin $PATH
-end
+#end
 
 # Read cache
 

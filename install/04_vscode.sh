@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 extensions=(
   CoenraadS.bracket-pair-colorizer
   dbaeumer.vscode-eslint
