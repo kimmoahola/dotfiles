@@ -74,6 +74,7 @@ if is-ubuntu; then
     jq
     nano
     peco
+    pipenv
     python
     python-pip
     screen
@@ -87,9 +88,6 @@ if is-ubuntu; then
 
   sudo apt-get update
   sudo apt-get --assume-yes install "${apps[@]}"
-
-  # pipenv
-  pip install --user pipenv
 
   # pyenv
   curl https://pyenv.run | bash
