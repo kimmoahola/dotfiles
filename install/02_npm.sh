@@ -11,9 +11,6 @@ nvm alias default 10
 nvm use default
 
 # Globally install with npm
-
-npm install -g npm
-
 packages=(
   diff-so-fancy
   eslint
