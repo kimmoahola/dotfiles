@@ -27,7 +27,6 @@ if is-macos; then
     nano
     peco
     pipenv
-    pyenv
     python
     screen
     shellcheck
@@ -88,11 +87,10 @@ if is-ubuntu; then
 
   sudo apt-get update
   sudo apt-get --assume-yes install "${apps[@]}"
-
-  # pyenv
-  curl https://pyenv.run | bash
-
 fi
+
+# pyenv
+curl https://pyenv.run | bash
 
 # Disable pipenv prompt
 set-config "VIRTUAL_ENV_DISABLE_PROMPT" "1" "$DOTFILES_CACHE"
