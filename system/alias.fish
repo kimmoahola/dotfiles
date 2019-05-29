@@ -23,9 +23,9 @@ alias less="less -R"
 
 # Directory listing/traversal
 
-set LS_COLORS (is-supported "ls --color" --color -G)
-set LS_TIMESTYLEISO (is-supported "ls --time-style=long-iso" --time-style=long-iso)
-set LS_GROUPDIRSFIRST (is-supported "ls --group-directories-first" --group-directories-first)
+set LS_COLORS "--color -G"
+set LS_TIMESTYLEISO "--time-style=long-iso"
+set LS_GROUPDIRSFIRST "--group-directories-first"
 
 alias l="ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ll="ls -lA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"

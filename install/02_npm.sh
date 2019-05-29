@@ -1,36 +1,24 @@
-if ! is-executable brew -o ! is-executable git; then
-  echo "Skipped: npm (missing: brew and/or git)"
-  return
-fi
+#!/usr/bin/env bash
 
-brew install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-mkdir $HOME/.nvm
-
-export DOTFILES_BREW_PREFIX_NVM=`brew --prefix nvm`
-set-config "DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_BREW_PREFIX_NVM" "$DOTFILES_CACHE"
-
-if [ -f "$DOTFILES_BREW_PREFIX_NVM/nvm.sh" ]; then
-  export NVM_DIR=$HOME/.nvm
-  source "$DOTFILES_BREW_PREFIX_NVM/nvm.sh"
-fi
-
-ln -sfv "$DOTFILES_BREW_PREFIX_NVM/nvm.sh" "$HOME/.nvm"
+# Run these so we can run nvm right now without opening a new shell
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 nvm install 10
 nvm alias default 10
 nvm use default
 
 # Globally install with npm
-
 packages=(
+  diff-so-fancy
   eslint
   eslint-config-airbnb-base
   eslint-config-prettier
   eslint-plugin-import
   get-port-cli
   nodemon
-  npm
   prettier
   release-it
   spot

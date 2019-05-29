@@ -25,6 +25,7 @@
   "python.jediEnabled": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
   "codemetrics.nodeconfiguration.ReturnStatement": 0.1,
   "codemetrics.nodeconfiguration.CaseClause": 0.1,
   "codemetrics.nodeconfiguration.DefaultClause": 0.1,

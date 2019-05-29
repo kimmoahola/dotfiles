@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+if ! is-macos; then
+  return
+fi
+
 # Echo commands
 set -x
 
@@ -47,7 +53,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-defaults write bluetoothaudiod "Enable AptX codec" -bool true                                                                                                    Tue Aug 14 12:53:53 2018
+defaults write bluetoothaudiod "Enable AptX codec" -bool true
 defaults write bluetoothaudiod "Enable AAC codec" -bool true
 
 # Enable full keyboard access for all controls

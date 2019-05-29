@@ -12,23 +12,26 @@ end
 
 function sep -a text
   echo
-  seq -f '' -s= -t\n 120
+  printf '%*s' 120 | tr ' ' '='
+  echo
   echo $text
   echo
 end
 
 function sub_update
-  sep "Updating brew"
-  brew update
+  if is-macos
+    sep "Updating brew"
+    brew update
 
-  sep "Upgrading brew packages"
-  brew upgrade
+    sep "Upgrading brew packages"
+    brew upgrade
 
-  sep "Reinstall pipenv (so it works if python was upgraded)"
-  brew reinstall pipenv
+    sep "Reinstall pipenv (so it works if python was upgraded)"
+    brew reinstall pipenv
 
-  sep "Upgrading brew cask packages"
-  brew cu
+    sep "Upgrading brew cask packages"
+    brew cu
+  end
 
   sep "Upgrading node"
   curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > $HOME/.config/fish/functions/nvm.fish

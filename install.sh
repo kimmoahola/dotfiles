@@ -26,6 +26,7 @@ mkdir -p "$BACKUP_DEST"
 [ -f "$HOME/.config/htop/htoprc" ] && cp "$HOME/.config/htop/htoprc" "$BACKUP_DEST"
 [ -f "$HOME/.config/fish/config.fish" ] && cp "$HOME/.config/fish/config.fish" "$BACKUP_DEST"
 [ -f "$HOME/Library/Application Support/Code/User/settings.json" ] && cp "$HOME/Library/Application Support/Code/User/settings.json" "$BACKUP_DEST"
+[ -f "$HOME/.config/Code/User/settings.json" ] && cp "$HOME/.config/Code/User/settings.json" "$BACKUP_DEST"
 
 # Bunch of symlinks
 
@@ -45,20 +46,16 @@ if is-macos; then
   ln -sfv "$DOTFILES_DIR/configs/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
 fi
 
+if is-ubuntu; then
+  mkdir -p "$HOME/.config/Code/User"
+  ln -sfv "$DOTFILES_DIR/configs/vscode.json" "$HOME/.config/Code/User/settings.json"
+fi
+
 ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
 
-# Package managers & packages
-
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/npm.sh"
-. "$DOTFILES_DIR/install/bash.sh"
-. "$DOTFILES_DIR/install/fish.sh"
-. "$DOTFILES_DIR/install/brew-cask.sh"
-. "$DOTFILES_DIR/install/vscode.sh"
-
-# MacOS defaults
-
-. "${DOTFILES_DIR}/install/defaults.macos.sh"
+for file in "$DOTFILES_DIR"/install/*; do
+  . $file
+done
 
 # Install extra stuff
 
