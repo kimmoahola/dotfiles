@@ -16,6 +16,16 @@ It targets Ubuntu and macOS systems. Last tested on Ubuntu 19.04 and macOS 10.14
 - [macOS apps](https://github.com/kimmoahola/dotfiles/blob/master/install/brew-cask.sh)
 - [macOS settings](https://github.com/kimmoahola/dotfiles/blob/master/install/defaults.macos.sh)
 
+## Install fonts
+
+### powerline font
+
+For example the Noto Mono for Powerline from https://github.com/powerline/fonts/raw/master/NotoMono/Noto%20Mono%20for%20Powerline.ttf
+
+### input font
+
+Download from: http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputSansNarrow-Light&italic=InputSansNarrow-LightItalic&bold=InputSansNarrow-Medium&boldItalic=InputSansNarrow-MediumItalic&a=0&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1&accept=I+do&email=
+
 ## Install
 
 :warning: Don't just run these files without first reviewing the code and removing stuff you don't need/want. Running the installation script may break your system. Use at your own risk!
@@ -48,16 +58,6 @@ The instalation is designed to be idempotent, meaning it can be run again.
 ### Install oh-my-fish and the theme
 
 Open a new shell and run `curl -L https://get.oh-my.fish | fish` and `omf install bobthefish`
-
-### Install fonts
-
-#### powerline font
-
-For example the Noto Mono for Powerline from https://github.com/powerline/fonts/raw/master/NotoMono/Noto%20Mono%20for%20Powerline.ttf
-
-#### input font
-
-Download from: http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputSansNarrow-Light&italic=InputSansNarrow-LightItalic&bold=InputSansNarrow-Medium&boldItalic=InputSansNarrow-MediumItalic&a=0&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1&accept=I+do&email=
 
 ### Add ssh key to github
 
