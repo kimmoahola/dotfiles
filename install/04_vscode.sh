@@ -8,6 +8,7 @@ extensions=(
   esbenp.prettier-vscode
   formulahendry.auto-close-tag
   formulahendry.auto-rename-tag
+  kisstkondoros.vscode-codemetrics
   ms-python.python
   NuclleaR.vscode-extension-auto-import
   oderwat.indent-rainbow
