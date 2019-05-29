@@ -2,7 +2,7 @@
 
 These are my dotfiles. Installation script will install various software and setup the shell to be my style. Also some macOS settings are modified.
 
-It targets macOS systems, but it may work on \*nix as well.
+It targets Ubuntu and macOS systems. Last tested on Ubuntu 19.04 and macOS 10.14.
 
 ## Package overview
 
@@ -58,6 +58,12 @@ For example the Noto Mono for Powerline from https://github.com/powerline/fonts/
 #### input font
 
 Download from: http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputSansNarrow-Light&italic=InputSansNarrow-LightItalic&bold=InputSansNarrow-Medium&boldItalic=InputSansNarrow-MediumItalic&a=0&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1&accept=I+do&email=
+
+### Add ssh key to github
+
+`cat $HOME/.ssh/id_rsa.pub`
+
+https://github.com/settings/keys
 
 ## The `dotfiles` command
 
