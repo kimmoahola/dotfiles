@@ -49,6 +49,8 @@ function sub_update
   sep "Upgrading oh my fish"
   omf update
 
+  sep "Manually check updates for docker-compose at https://github.com/docker/compose/releases"
+
   sep "Now refresh by opening a new shell"
 end
 
