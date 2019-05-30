@@ -11,6 +11,7 @@ if is-macos; then
   # Install packages
 
   apps=(
+    ansible
     bats
     coreutils
     ffmpeg
@@ -67,6 +68,7 @@ if is-ubuntu; then
   sudo apt-get remove --purge --assume-yes "${apps_to_remove[@]}"
 
   apps=(
+    ansible
     build-essential
     coreutils
     curl
