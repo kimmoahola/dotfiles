@@ -17,5 +17,8 @@ dconf write /org/gnome/terminal/legacy/theme-variant "'dark'"
 dconf write /org/gnome/desktop/peripherals/keyboard/repeat-interval 25
 dconf write /org/gnome/desktop/peripherals/keyboard/delay 200
 
-set +x
+dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop', 'code_code.desktop']"
 
+dconf write /org/gtk/settings/file-chooser/show-hidden true
+
+set +x
