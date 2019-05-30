@@ -3,8 +3,6 @@
 alias _="sudo"
 
 alias g="git"
-# auto-complete for alias 'g' also
-# complete -o default -o nospace -F _git g
 
 alias rr="rm -rf"
 
@@ -31,7 +29,6 @@ alias l="ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ll="ls -lA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias lt="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ld="ls -ld $LS_COLORS $LS_TIMESTYLEISO */"
-alias lpm="stat -c '%a %n' *"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
