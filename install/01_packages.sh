@@ -59,6 +59,13 @@ fi
 
 if is-ubuntu; then
 
+  apps_to_remove=(
+    ubuntu-web-launchers
+    thunderbird
+  )
+
+  sudo apt-get remove --purge --assume-yes "${apps_to_remove[@]}"
+
   apps=(
     build-essential
     coreutils
