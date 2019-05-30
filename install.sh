@@ -25,6 +25,7 @@ mkdir -p "$BACKUP_DEST"
 [ -f "$HOME/.gitconfig" ] && cp "$HOME/.gitconfig" "$BACKUP_DEST"
 [ -f "$HOME/.config/htop/htoprc" ] && cp "$HOME/.config/htop/htoprc" "$BACKUP_DEST"
 [ -f "$HOME/.config/fish/config.fish" ] && cp "$HOME/.config/fish/config.fish" "$BACKUP_DEST"
+[ -f "$HOME/.screenrc" ] && cp "$HOME/.screenrc" "$BACKUP_DEST"
 [ -f "$HOME/Library/Application Support/Code/User/settings.json" ] && cp "$HOME/Library/Application Support/Code/User/settings.json" "$BACKUP_DEST"
 [ -f "$HOME/.config/Code/User/settings.json" ] && cp "$HOME/.config/Code/User/settings.json" "$BACKUP_DEST"
 
@@ -52,6 +53,7 @@ if is-ubuntu; then
 fi
 
 ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
+ln -sfv "$DOTFILES_DIR/configs/.screenrc" "$HOME"
 
 for file in "$DOTFILES_DIR"/install/*; do
   . $file
