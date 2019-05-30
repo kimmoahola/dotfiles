@@ -33,6 +33,11 @@ function sub_update
     brew cu
   end
 
+  if is-ubuntu
+    sep "Remove autoremovable packages"
+    sudo apt-get autoremove --purge --assume-yes
+  end
+
   sep "Upgrading node"
   curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > $HOME/.config/fish/functions/nvm.fish
   nvm install 10
