@@ -81,6 +81,12 @@ Custom installation step can be put into `$HOME/.dotfiles_extra/install.sh`. Tha
 
 `$HOME/.dotfiles_extra/runcom/*.fish` will be sources from `config.fish`. You can put your custom settings, such as credentials in there.
 
+## Upgrading to newer Ubuntu
+
+- Check that docker-ce is available for the newer Ubuntu.
+- Rename any 3rd party sources in `/etc/apt/sources.list` to point to the newer Ubuntu release.
+- After the upgrade, run install.sh and check the results.
+
 ## Credits
 
 Many thanks to the [dotfiles community](https://dotfiles.github.io).
