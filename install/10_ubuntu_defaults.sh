@@ -14,5 +14,8 @@ dconf write /org/gnome/terminal/legacy/profiles:/:$profile/use-system-font false
 
 dconf write /org/gnome/terminal/legacy/theme-variant "'dark'"
 
+dconf write /org/gnome/desktop/peripherals/keyboard/repeat-interval 25
+dconf write /org/gnome/desktop/peripherals/keyboard/delay 200
+
 set +x
 
