@@ -64,6 +64,13 @@ if [ -d "$DOTFILES_EXTRA_DIR" ] && [ -f "$DOTFILES_EXTRA_DIR/install.sh" ]; then
   . "$DOTFILES_EXTRA_DIR/install.sh"
 fi
 
+if is-macos; then
+  # No brew or other automatic method available
+  echo
+  echo "Install Fork from https://git-fork.com/"
+  echo
+fi
+
 echo
 echo "Some changes may require a restart to take effect."
 echo
