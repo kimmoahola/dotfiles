@@ -79,6 +79,7 @@ if is-ubuntu; then
     grep
     htop
     httpie
+    net-tools
     jq
     nano
     peco
