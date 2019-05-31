@@ -19,8 +19,8 @@ if is-macos; then
     fish
     git
     git-extras
-    gnu-tar
     gnu-sed
+    gnu-tar
     grep
     htop
     httpie
@@ -35,6 +35,7 @@ if is-macos; then
     tree
     unar
     wget
+    zlib  # for pyenv to be able to build python versions
   )
 
   brew install "${apps[@]}"
@@ -61,8 +62,8 @@ fi
 if is-ubuntu; then
 
   apps_to_remove=(
-    ubuntu-web-launchers
     thunderbird
+    ubuntu-web-launchers
   )
 
   sudo apt-get remove --purge --assume-yes "${apps_to_remove[@]}"
@@ -79,9 +80,9 @@ if is-ubuntu; then
     grep
     htop
     httpie
-    net-tools
     jq
     nano
+    net-tools
     peco
     pipenv
     python
