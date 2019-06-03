@@ -51,11 +51,13 @@ function sub_update
 
   sep "Stuff needing a manual check for updates"
   echo "Check updates for these and if an update is available, you should modify the installation scripts to install the new version:"
-  echo "- docker-compose at https://github.com/docker/compose/releases"
   echo "- nvm at https://github.com/nvm-sh/nvm/releases"
   echo "- pyenv"
   echo "- global python version"
   echo "- global node version"
+  if is-ubuntu
+    echo "- docker-compose at https://github.com/docker/compose/releases"
+  end
 
   sep "Now refresh by opening a new shell"
 end
