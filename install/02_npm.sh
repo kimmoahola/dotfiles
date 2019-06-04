@@ -31,6 +31,3 @@ packages=(
 npm install -g "${packages[@]}"
 
 npm cache clean --force
-
-mkdir -p $HOME/.config/fish/functions
-curl -sSL https://raw.githubusercontent.com/brigand/fast-nvm-fish/master/nvm.fish > $HOME/.config/fish/functions/nvm.fish

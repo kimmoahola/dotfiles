@@ -46,8 +46,9 @@ function sub_update
   sep "Upgrading npm global packages"
   npm update -g
 
-  sep "Upgrading oh my fish"
-  omf update
+  sep "Upgrading fisher and its packages"
+  fisher self-update
+  fisher
 
   sep "Stuff needing a manual check for updates"
   echo "Check updates for these and if an update is available, you should modify the installation scripts to install the new version:"

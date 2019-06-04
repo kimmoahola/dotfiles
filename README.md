@@ -43,10 +43,6 @@ Or, using wget:
 
     bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/kimmoahola/dotfiles/master/remote-install.sh`"
 
-### Install oh-my-fish and the theme
-
-Open a new shell and run `curl -L https://get.oh-my.fish | fish` and `omf install bobthefish`
-
 ### Add ssh key to github
 
 `cat $HOME/.ssh/id_rsa.pub`
