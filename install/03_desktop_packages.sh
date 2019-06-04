@@ -9,6 +9,7 @@ if is-macos; then
   apps=(
     docker
     firefox
+    font-fira-code
     google-chrome
     google-chrome-canary
     insomnia
@@ -58,6 +59,7 @@ if is-ubuntu; then
     docker-ce
     docker-ce-cli
     firefox
+    fonts-firacode
     virtualbox
   )
 

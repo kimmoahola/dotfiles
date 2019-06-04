@@ -82,5 +82,6 @@
   "codemetrics.nodeconfiguration.ArrayBindingPattern": 0.1,
   "codemetrics.nodeconfiguration.JsxElement": 0.2,
   "codemetrics.nodeconfiguration.JsxSelfClosingElement": 0.1,
-  "editor.fontFamily": "Input, monospace"
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontLigatures": true
 }

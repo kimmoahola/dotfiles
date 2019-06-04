@@ -24,11 +24,7 @@ On a sparkling fresh installation of macOS
 
     xcode-select --install
 
-Install fonts.
-
-The Noto Mono for Powerline from https://github.com/powerline/fonts/raw/master/NotoMono/Noto%20Mono%20for%20Powerline.ttf
-
-The Input font from: http://input.fontbureau.com/build/?fontSelection=fourStyleFamily&regular=InputSansNarrow-Light&italic=InputSansNarrow-LightItalic&bold=InputSansNarrow-Medium&boldItalic=InputSansNarrow-MediumItalic&a=0&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1&accept=I+do&email=
+Install font: The Noto Mono for Powerline from https://github.com/powerline/fonts/raw/master/NotoMono/Noto%20Mono%20for%20Powerline.ttf
 
 Install the dotfiles with either Git or curl/wget:
 
@@ -56,6 +52,10 @@ Open a new shell and run `curl -L https://get.oh-my.fish | fish` and `omf instal
 `cat $HOME/.ssh/id_rsa.pub`
 
 https://github.com/settings/keys
+
+### Add Fira Code font to editors
+
+Various instructions: https://github.com/tonsky/FiraCode#editor-support
 
 ## The `dotfiles` command
 
