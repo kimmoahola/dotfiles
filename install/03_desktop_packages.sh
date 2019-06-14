@@ -63,7 +63,9 @@ if is-ubuntu; then
     virtualbox
   )
 
-  sudo apt-get --assume-yes install "${apps[@]}"
+  for app in "${apps[@]}"; do
+    sudo apt-get --assume-yes install "${app}"
+  done
 
   DOCKER_COMPOSE_VERSION="1.24.0"
   if ! [ -f /usr/local/bin/docker-compose-$DOCKER_COMPOSE_VERSION ]; then

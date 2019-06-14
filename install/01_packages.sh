@@ -66,7 +66,9 @@ if is-ubuntu; then
     ubuntu-web-launchers
   )
 
-  sudo apt-get remove --purge --assume-yes "${apps_to_remove[@]}"
+  for app in "${apps_to_remove[@]}"; do
+    sudo apt-get remove --purge --assume-yes "${app}"
+  done
 
   apps=(
     ansible
@@ -113,7 +115,10 @@ if is-ubuntu; then
   )
 
   sudo apt-get update
-  sudo apt-get --assume-yes install "${apps[@]}"
+
+  for app in "${apps[@]}"; do
+    sudo apt-get --assume-yes install "${app}"
+  done
 fi
 
 # pyenv
