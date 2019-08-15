@@ -11,7 +11,6 @@ if is-macos; then
   # Install packages
 
   apps=(
-    ansible
     bats
     coreutils
     ffmpeg
