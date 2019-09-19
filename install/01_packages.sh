@@ -33,6 +33,7 @@ if is-macos; then
     ssh-copy-id
     tree
     unar
+    watch
     wget
     zlib  # for pyenv to be able to build python versions
   )
