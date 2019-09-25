@@ -61,3 +61,7 @@ function transfer
     ## cleanup
     rm -f $tmpfile
 end
+
+function host-headers
+  curl --insecure -s -v -o /dev/null "$argv"
+end
