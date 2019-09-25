@@ -65,3 +65,7 @@ end
 function host-headers
   curl --insecure -s -v -o /dev/null "$argv"
 end
+
+function view-cert-file
+  openssl x509 -in "$argv" -noout -text
+end
