@@ -14,6 +14,7 @@ if is-macos; then
     google-chrome-canary
     insomnia
     iterm2
+    maccy
     skitch
     spectacle
     spotify

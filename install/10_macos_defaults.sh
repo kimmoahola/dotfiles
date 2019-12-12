@@ -207,6 +207,15 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Show also the date in menu bar
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  H:mm"
 
+
+###############################################################################
+# Misc
+###############################################################################
+
+defaults write org.p0deje.Maccy pasteByDefault true
+defaults write org.p0deje.Maccy fuzzySearch true
+
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
