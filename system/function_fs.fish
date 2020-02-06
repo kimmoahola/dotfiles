@@ -26,9 +26,9 @@ end
 # Check if resource is served compressed
 
 function check-compression
-  curl --write-out 'Size (uncompressed) = %{size_download}\n' --silent --output /dev/null $argv
-  curl --header 'Accept-Encoding: gzip,deflate,compress' --write-out 'Size (compressed) =   %{size_download}\n' --silent --output /dev/null $argv
-  curl --head --header 'Accept-Encoding: gzip,deflate' --silent $argv | grep -i "cache\|content\|vary\|expires" --color=NEVER
+  curl --insecure --write-out 'Size (uncompressed) = %{size_download}\n' --silent --output /dev/null $argv
+  curl --insecure --header 'Accept-Encoding: gzip,deflate,compress' --write-out 'Size (compressed) =   %{size_download}\n' --silent --output /dev/null $argv
+  curl --insecure --head --header 'Accept-Encoding: gzip,deflate' --silent $argv | grep -i "cache\|content\|vary\|expires" --color=NEVER
 end
 
 # Get gzipped file size
