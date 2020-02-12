@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if lsb_release --id --short | grep Ubuntu >/dev/null 2>&1; then
+if lsb_release --id --short 2>&1 | grep Ubuntu >/dev/null 2>&1; then
   exit 0
 else
   exit 1
