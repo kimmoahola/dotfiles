@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 if is-macos; then
-  brew tap caskroom/cask
   brew tap buo/cask-upgrade
 
   # Install packages
