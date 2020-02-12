@@ -26,9 +26,6 @@ function sub_update
     sep "Upgrading brew packages"
     brew upgrade
 
-    sep "Reinstall pipenv (so it works if python was upgraded)"
-    brew reinstall pipenv
-
     sep "Upgrading brew cask packages"
     brew cu
   end
@@ -50,10 +47,15 @@ function sub_update
   fisher self-update
   fisher
 
+  sep "Upgrading poetry"
+  poetry self update
+
+  sep "Upgrading pyenv"
+  pyenv update
+
   sep "Stuff needing a manual check for updates"
   echo "Check updates for these and if an update is available, you should modify the installation scripts to install the new version:"
   echo "- nvm at https://github.com/nvm-sh/nvm/releases"
-  echo "- pyenv"
   echo "- global python version"
   echo "- global node version"
   if is-ubuntu

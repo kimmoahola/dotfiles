@@ -26,7 +26,6 @@ if is-macos; then
     jq
     nano
     peco
-    pipenv
     python
     screen
     shellcheck
@@ -86,7 +85,6 @@ if is-ubuntu; then
     nano
     net-tools
     peco
-    pipenv
     python
     python-pip
     screen
@@ -124,5 +122,8 @@ fi
 # pyenv
 curl https://pyenv.run | bash
 
-# Disable pipenv prompt
+# Poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
+# Disable "(virtual env name)" prompt
 set-config "VIRTUAL_ENV_DISABLE_PROMPT" "1" "$DOTFILES_CACHE"

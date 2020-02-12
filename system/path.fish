@@ -13,6 +13,7 @@ prepend-path "$HOME/bin"
 prepend-path "/sbin"
 prepend-path "/usr/sbin"
 prepend-path "/usr/local/sbin"
+prepend-path "$HOME/.poetry/bin"
 
 set -g -x MANPATH \
   $DOTFILES_BREW_PREFIX_COREUTILS/libexec/gnuman \
