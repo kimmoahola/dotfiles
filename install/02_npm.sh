@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
 # Run these so we can run nvm right now without opening a new shell
 export NVM_DIR="$HOME/.nvm"
