@@ -114,9 +114,9 @@
     "Background Color" : {
       "Red Component" : 0,
       "Color Space" : "sRGB",
-      "Blue Component" : 0.19999992847442627,
+      "Blue Component" : 0,
       "Alpha Component" : 1,
-      "Green Component" : 0.17254900932312012
+      "Green Component" : 0
     },
     "Character Encoding" : 4,
     "Ansi 11 Color" : {
@@ -321,7 +321,7 @@
     "Minimum Contrast" : 0,
     "Shortcut" : "",
     "Triggers" : [
-  
+
     ],
     "Transparency" : 0,
     "Cursor Color" : {
@@ -382,4 +382,3 @@
   }
   ]
   }
-  
