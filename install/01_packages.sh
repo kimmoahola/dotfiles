@@ -29,6 +29,7 @@ if is-macos; then
     python
     screen
     shellcheck
+    siege
     ssh-copy-id
     tree
     unar
@@ -90,6 +91,7 @@ if is-ubuntu; then
     screen
     sed
     shellcheck
+    siege
     tar
     tree
     unar
