@@ -69,3 +69,15 @@ end
 function view-cert-file
   openssl x509 -in "$argv" -noout -text
 end
+
+function listening
+
+  if is-macos
+    sudo lsof -nP -i4TCP | egrep 'COMMAND|LISTEN'
+  end
+
+  if is-ubuntu
+    sudo netstat -pant | egrep 'Proto|LISTEN'
+  end
+
+end
