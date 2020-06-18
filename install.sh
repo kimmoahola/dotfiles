@@ -56,6 +56,7 @@ fi
 
 ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
 ln -sfv "$DOTFILES_DIR/configs/.screenrc" "$HOME"
+ln -sfv "$DOTFILES_DIR/configs/.hyper.js" "$HOME"
 
 for file in "$DOTFILES_DIR"/install/*; do
   . $file
@@ -72,6 +73,13 @@ if is-macos; then
   # No brew or other automatic method available
   echo
   echo "Install Fork from https://git-fork.com/"
+  echo
+fi
+
+if is-ubuntu; then
+  # No brew or other automatic method available
+  echo
+  echo "Install Hyper from https://hyper.is/"
   echo
 fi
 
