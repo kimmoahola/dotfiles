@@ -11,6 +11,7 @@ if is-macos; then
     font-fira-code
     google-chrome
     google-chrome-canary
+    hyper
     insomnia
     iterm2
     maccy
@@ -67,7 +68,7 @@ if is-ubuntu; then
     sudo apt-get --assume-yes install "${app}"
   done
 
-  DOCKER_COMPOSE_VERSION="1.24.0"
+  DOCKER_COMPOSE_VERSION="1.26.0"
   if ! [ -f /usr/local/bin/docker-compose-$DOCKER_COMPOSE_VERSION ]; then
     sudo curl -L "https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose-$DOCKER_COMPOSE_VERSION
   fi
