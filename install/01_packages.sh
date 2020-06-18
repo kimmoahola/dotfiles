@@ -11,7 +11,6 @@ if is-macos; then
   # Install packages
 
   apps=(
-    bats
     coreutils
     ffmpeg
     findutils
@@ -26,7 +25,6 @@ if is-macos; then
     jq
     nano
     peco
-    python
     screen
     shellcheck
     siege
