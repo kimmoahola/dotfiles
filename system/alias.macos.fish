@@ -2,9 +2,6 @@
 
 alias cpwd="pwd|tr -d '\n'|pbcopy"
 
-# Shortcuts
-
-alias gg="$DOTFILES_GIT_GUI"
 
 # Recursively remove Apple meta files
 

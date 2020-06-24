@@ -14,5 +14,4 @@ set -x -g MANPAGER "less -X"
 set -x -g PAGER less
 
 set -x -g EDITOR "code --wait"
-set -x -g DOTFILES_IDE "code"
-set -x -g DOTFILES_GIT_GUI "stree"
+
