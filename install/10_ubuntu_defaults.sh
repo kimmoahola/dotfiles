@@ -27,6 +27,11 @@ dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'fire
 
 dconf write /org/gtk/settings/file-chooser/show-hidden true
 
+dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true
+dconf write /org/gnome/settings-daemon/plugins/color/night-light-temperature "uint32 3500"
+
+dconf write /org/gnome/settings-daemon/plugins/power/power-button-action "'suspend'"
+
 if ! [ -f /swapfile ]; then
   sudo fallocate -l 8G /swapfile
   sudo chmod 600 /swapfile
