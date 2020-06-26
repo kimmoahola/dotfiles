@@ -61,7 +61,6 @@ if is-ubuntu; then
 
   apps_to_remove=(
     thunderbird
-    ubuntu-web-launchers
   )
 
   for app in "${apps_to_remove[@]}"; do
@@ -69,8 +68,8 @@ if is-ubuntu; then
   done
 
   apps=(
-    ansible
     build-essential
+    ca-certificates
     coreutils
     curl
     findutils
@@ -84,8 +83,6 @@ if is-ubuntu; then
     nano
     net-tools
     peco
-    python
-    python-pip
     screen
     sed
     shellcheck
@@ -120,10 +117,11 @@ if is-ubuntu; then
 fi
 
 # pyenv
-curl https://pyenv.run | bash
+if ! [ -d "$HOME/.pyenv" ]; then
+  curl https://pyenv.run | bash
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+PATH="$PYENV_ROOT/bin:$PATH"
 
 # Poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-
-# Disable "(virtual env name)" prompt
-set-config "VIRTUAL_ENV_DISABLE_PROMPT" "1" "$DOTFILES_CACHE"
