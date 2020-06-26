@@ -10,7 +10,7 @@ if is-ubuntu; then
 fi
 
 # Fisher package manager
-if ! [ -f ~/.config/fish/functions/fisher.fish ]; then
+if ! [ -f $HOME/.config/fish/functions/fisher.fish ]; then
   curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fi
 
