@@ -9,7 +9,7 @@ set -x
 
 profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 profile=${profile:1:-1} # remove leading and trailing single quotes
-dconf write /org/gnome/terminal/legacy/profiles:/:$profile/font "'Noto Mono for Powerline 10'"
+dconf write /org/gnome/terminal/legacy/profiles:/:$profile/font "'Fira Code 10'"
 dconf write /org/gnome/terminal/legacy/profiles:/:$profile/use-system-font false
 dconf write /org/gnome/terminal/legacy/profiles:/:$profile/foreground-color "'rgb(226,228,223)'"
 dconf write /org/gnome/terminal/legacy/profiles:/:$profile/background-color "'rgb(27,29,34)'"
@@ -26,5 +26,13 @@ dconf write /org/gnome/desktop/peripherals/keyboard/delay 200
 dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop', 'code_code.desktop']"
 
 dconf write /org/gtk/settings/file-chooser/show-hidden true
+
+if ! [ -f /swapfile ]; then
+  sudo fallocate -l 8G /swapfile
+  sudo chmod 600 /swapfile
+  sudo mkswap /swapfile
+  sudo sh -c 'echo "/swapfile swap swap defaults 0 0" >> /etc/fstab'
+  sudo swapon -a
+fi
 
 set +x
