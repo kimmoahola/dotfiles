@@ -30,7 +30,7 @@ Install the dotfiles with either Git or curl/wget:
 
 ### Clone with Git
 
-    git clone https://github.com/kimmoahola/dotfiles.git ~/.dotfiles
+    git clone git@github.com:kimmoahola/dotfiles.git ~/.dotfiles
     bash ~/.dotfiles/install.sh
 
 ### Remotely install using curl
