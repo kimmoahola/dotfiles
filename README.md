@@ -45,7 +45,7 @@ Or, using wget:
 
 ### Add ssh key to github
 
-`cat $HOME/.ssh/id_rsa.pub`
+`cat $HOME/.ssh/id_ecdsa.pub`
 
 https://github.com/settings/keys
 
