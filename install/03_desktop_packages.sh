@@ -11,7 +11,6 @@ if is-macos; then
     font-fira-code
     google-chrome
     google-chrome-canary
-    hyper
     insomnia
     iterm2
     maccy
