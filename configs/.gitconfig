@@ -35,10 +35,12 @@
   remote = green
 
 [color "diff"]
-  meta = yellow bold
+	meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
+  commit = yellow bold
+  whitespace = red reverse
 
 [color "status"]
   added = yellow
@@ -77,3 +79,6 @@
 
 [difftool "default-difftool"]
   cmd = code --wait --new-window --diff $LOCAL $REMOTE
+
+[pull]
+  ff = only
