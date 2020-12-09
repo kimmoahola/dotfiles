@@ -8,6 +8,6 @@ end
 
 if is-macos
   # For pyenv to be able to build python versions
-  set -x -g LDFLAGS "-L/usr/local/opt/zlib/lib" $LDFLAGS
-  set -x -g CPPFLAGS "-I/usr/local/opt/zlib/include" $CPPFLAGS
+  set -x -g LDFLAGS "-L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl/lib" $LDFLAGS
+  set -x -g CPPFLAGS "-I/usr/local/opt/zlib/include -I/usr/local/opt/openssl/include" $CPPFLAGS
 end
