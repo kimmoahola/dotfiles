@@ -22,7 +22,7 @@ if is-macos; then
     visual-studio-code
   )
 
-  brew cask install "${apps[@]}"
+  brew install --cask "${apps[@]}"
 
   # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
   quick_look_apps=(
@@ -36,7 +36,7 @@ if is-macos; then
     qlvideo
   )
 
-  brew cask install "${quick_look_apps[@]}"
+  brew install --cask "${quick_look_apps[@]}"
 
 fi
 
