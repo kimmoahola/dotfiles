@@ -30,13 +30,11 @@ defaults write com.apple.sound.beep.feedback -bool false
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# TODO: does not seems to work on macOS 10.14
 # Menu bar: disable transparency
-sudo defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -int 1
 
-# TODO: does not seems to work on macOS 10.14
 # For example, remove motion from switching desktops
-sudo defaults write com.apple.universalaccess reduceMotion -bool true
+defaults write com.apple.universalaccess reduceMotion -int 1
 
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent YES
@@ -214,7 +212,7 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  H:mm"
 
 
 ###############################################################################
-# Misc
+# Misc - Maccy
 ###############################################################################
 
 defaults write org.p0deje.Maccy pasteByDefault true
