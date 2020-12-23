@@ -44,8 +44,7 @@ function sub_update
   npm update -g
 
   sep "Upgrading fisher and its packages"
-  fisher self-update
-  fisher
+  fisher update
 
   sep "Upgrading poetry"
   poetry self update
