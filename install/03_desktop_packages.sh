@@ -26,7 +26,6 @@ if is-macos; then
 
   # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
   quick_look_apps=(
-    qlcolorcode
     qlstephen
     qlmarkdown
     quicklook-json
