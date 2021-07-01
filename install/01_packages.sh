@@ -11,11 +11,14 @@ if is-macos; then
   # Install packages
 
   apps=(
+    bat
     coreutils
+    exa
     ffmpeg
     findutils
     fish
     git
+    git-delta
     git-extras
     gnu-sed
     gnu-tar
@@ -68,10 +71,12 @@ if is-ubuntu; then
   done
 
   apps=(
+    bat
     build-essential
     ca-certificates
     coreutils
     curl
+    exa
     findutils
     fish
     git
