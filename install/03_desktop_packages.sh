@@ -14,6 +14,7 @@ if is-macos; then
     insomnia
     iterm2
     maccy
+    raycast
     skitch
     spectacle
     spotify
@@ -23,20 +24,6 @@ if is-macos; then
   )
 
   brew install --cask "${apps[@]}"
-
-  # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-  quick_look_apps=(
-    qlstephen
-    qlmarkdown
-    quicklook-json
-    qlimagesize
-    webpquicklook
-    suspicious-package
-    qlvideo
-  )
-
-  brew install --cask "${quick_look_apps[@]}"
-
 fi
 
 if is-ubuntu; then
