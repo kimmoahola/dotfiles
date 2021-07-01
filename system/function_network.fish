@@ -17,49 +17,42 @@ end
 # https://github.com/dutchcoders/transfer.sh/
 
 function transfer
-    if test (count $argv) -eq 0
-        echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"
-        return 1
-    end
+  if test (count $argv) -eq 0
+    echo "No arguments specified. Usage:"
+    echo "transfer /tmp/test.md"
+    return 1
+  end
 
-    ## get temporarily filename, output is written to this file so progress can be showed
-    set tmpfile ( mktemp -t transferXXX )
+  ## get temporarily filename, output is written to this file so progress can be showed
+  set tmpfile ( mktemp -t transferXXX )
 
-    ## upload stdin or file
-    set file $argv[1]
+  ## upload stdin or file
+  set file $argv[1]
 
-    #if tty -s;
-    #then
-        set basefile (basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
+  set basefile (basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
 
-    #    if [ ! -e $file ];
-    #    then
-    #        echo "File $file doesn't exists."
-    #        return 1
-    #    fi
+  if test -d $file
+    # zip directory and transfer
+    echo "zipping directory..."
+    set zipfile ( mktemp -t transferXXX.zip )
+    zip -r -q - $file >> $zipfile
+    echo "uploading..."
+    curl --progress-bar --upload-file "$zipfile" "https://transfer.sh/$basefile.zip" >> $tmpfile
+    rm -f $zipfile
+  else
+    # transfer file
+    echo "uploading..."
+    curl --progress-bar --upload-file "$file" "https://transfer.sh/$basefile" >> $tmpfile
+  end
 
-        if test -d $file
-            # zip directory and transfer
-            set zipfile ( mktemp -t transferXXX.zip )
-            # echo (dirname $file)
-            #cd (dirname $file) and echo (pwd)
-            zip -r -q - $file >> $zipfile
-            curl --progress-bar --upload-file "$zipfile" "https://transfer.sh/$basefile.zip" >> $tmpfile
-            rm -f $zipfile
-        else
-            # transfer file
-            curl --progress-bar --upload-file "$file" "https://transfer.sh/$basefile" >> $tmpfile
-        end
-    #else
-    #    # transfer pipe
-    #    curl --progress-bar --upload-file "-" "https://transfer.sh/$file" >> $tmpfile
-    #fi
+  # newline to the end
+  echo >> $tmpfile
 
-    ## cat output link
-    cat $tmpfile
+  ## cat output link
+  cat $tmpfile
 
-    ## cleanup
-    rm -f $tmpfile
+  ## cleanup
+  rm -f $tmpfile
 end
 
 function host-headers
