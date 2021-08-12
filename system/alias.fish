@@ -22,6 +22,7 @@ alias less="less -R"
 # Directory listing/traversal
 
 alias l="exa --long --header --git --classify --icons --group-directories-first --binary"
+alias la="l --all"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
