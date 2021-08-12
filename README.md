@@ -24,7 +24,7 @@ On a sparkling fresh installation of macOS
 
     xcode-select --install
 
-Install font: The Noto Mono for Powerline from https://github.com/powerline/fonts/raw/master/NotoMono/Noto%20Mono%20for%20Powerline.ttf
+Install font: Noto Mono Nerd Font Complete Mono from nerd-fonts at https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf
 
 Install the dotfiles with either Git or curl/wget:
 
@@ -93,3 +93,9 @@ Custom installation step can be put into `$HOME/.dotfiles_extra/install.sh`. Tha
 ## Credits
 
 Many thanks to the [dotfiles community](https://dotfiles.github.io).
+
+## "Manual"
+
+### siege
+
+`siege --concurrent=1 --reps=10 --header="Cookie: sessionid=asdfasdf" "https://example.com`
