@@ -2,8 +2,8 @@ set -x PYENV_ROOT $HOME/.pyenv
 prepend-path "$PYENV_ROOT/bin"
 
 if status is-interactive
-  source (pyenv init -|psub)
-  source (pyenv virtualenv-init -|psub)
+  pyenv init --path | source
+  pyenv init - | source
 end
 
 if is-macos
