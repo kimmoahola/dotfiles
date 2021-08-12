@@ -55,7 +55,6 @@ if is-ubuntu; then
   ln -sfv "$DOTFILES_DIR/configs/vscode.json" "$HOME/.config/Code/User/settings.json"
 fi
 
-ln -sfv "$DOTFILES_DIR/configs/.eslintrc" "$HOME"
 ln -sfv "$DOTFILES_DIR/configs/.screenrc" "$HOME"
 
 for file in "$DOTFILES_DIR"/install/*; do
