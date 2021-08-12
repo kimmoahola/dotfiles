@@ -18,7 +18,6 @@
   "editor.formatOnSave": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
-  "window.zoomLevel": 0,
   "tslint.autoFixOnSave": true,
   "gitlens.views.repositories.files.layout": "auto",
   "gitlens.codeLens.enabled": false,
@@ -83,5 +82,13 @@
   "codemetrics.nodeconfiguration.JsxElement": 0.2,
   "codemetrics.nodeconfiguration.JsxSelfClosingElement": 0.1,
   "editor.fontFamily": "'Fira Code', monospace",
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "python.languageServer": "Microsoft",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "python.formatting.provider": "none",
+  "workbench.colorCustomizations": {},
+  "editor.fontSize": 16
 }
