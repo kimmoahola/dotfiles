@@ -30,7 +30,7 @@ test -f "$DOTFILES_CACHE"; and source "$DOTFILES_CACHE"
 
 # Source the dotfiles (order matters)
 
-for DOTFILE in "$DOTFILES_DIR"/system/{function,function_*,path,env,alias,completion,nvm,pyenv,theme}.fish
+for DOTFILE in "$DOTFILES_DIR"/system/{function,function_*,path,env,alias,completion,fnm,pyenv,theme}.fish
   test -f "$DOTFILE"; and source $DOTFILE
 end
 

@@ -2,7 +2,6 @@
 
 extensions=(
   CoenraadS.bracket-pair-colorizer
-  dbaeumer.vscode-eslint
   eamodio.gitlens
   eg2.tslint
   esbenp.prettier-vscode

@@ -1,33 +1,11 @@
 #!/usr/bin/env bash
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+# Install fnm
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
-# Run these so we can run nvm right now without opening a new shell
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Run this so we can run fnm right now without opening a new shell
+eval "$(fnm env)"
 
-nvm install 14
-nvm alias default 14
-nvm use default
-
-# Globally install with npm
-packages=(
-  diff-so-fancy
-  eslint
-  eslint-config-airbnb-base
-  eslint-config-prettier
-  eslint-plugin-import
-  get-port-cli
-  nodemon
-  prettier
-  release-it
-  spot
-  superstatic
-  svgo
-  tldr
-  underscore-cli
-)
-
-npm install -g "${packages[@]}"
-
-npm cache clean --force
+fnm install 16
+fnm alias default 16
+fnm use default
