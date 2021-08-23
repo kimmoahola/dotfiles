@@ -9,8 +9,6 @@ if is-macos; then
     docker
     firefox
     font-fira-code
-    google-chrome
-    google-chrome-canary
     insomnia
     iterm2
     maccy
@@ -21,6 +19,7 @@ if is-macos; then
     tunnelblick
     virtualbox
     visual-studio-code
+    vivaldi
   )
 
   brew install --cask "${apps[@]}"
