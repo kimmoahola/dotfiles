@@ -4,13 +4,7 @@ function srv
   test -n "$argv"; or set argv "."
   set PORT (get-port)
   open "http://localhost:"$PORT
-  superstatic "$DIR" -p "$PORT"
-end
-
-# Get IP from hostname
-
-function hostname2ip
-  ping -c 1 "$argv" | egrep -m1 -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+  python -m http.server --directory "$argv" "$PORT"
 end
 
 # Upload file to transfer.sh
