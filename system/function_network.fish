@@ -65,6 +65,7 @@ function listening
 
   if is-ubuntu
     sudo netstat -pant | egrep 'Proto|LISTEN'
+    # OR: sudo ss -ltp
   end
 
 end
