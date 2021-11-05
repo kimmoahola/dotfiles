@@ -18,6 +18,7 @@ extensions=(
   wayou.vscode-todo-highlight
   wix.vscode-import-cost
   visualstudioexptteam.vscodeintellicode
+  streetsidesoftware.code-spell-checker
 )
 
 for ext in "${extensions[@]}"; do
