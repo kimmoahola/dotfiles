@@ -11,7 +11,7 @@ fi
 
 # Fisher package manager
 if ! [ -f $HOME/.config/fish/functions/fisher.fish ]; then
-  curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fi
 
 fish -c "fisher update"
