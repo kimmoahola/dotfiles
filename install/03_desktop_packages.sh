@@ -2,6 +2,7 @@
 
 if is-macos; then
   brew tap buo/cask-upgrade
+  brew tap homebrew/cask-fonts
 
   # Install packages
 
@@ -12,6 +13,7 @@ if is-macos; then
     insomnia
     iterm2
     maccy
+    murus
     raycast
     skitch
     spectacle
