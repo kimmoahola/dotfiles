@@ -83,12 +83,23 @@
   "codemetrics.nodeconfiguration.JsxSelfClosingElement": 0.1,
   "editor.fontFamily": "'Fira Code', monospace",
   "editor.fontLigatures": true,
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Default",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "workbench.colorTheme": "Default Dark+",
   "python.formatting.provider": "none",
   "workbench.colorCustomizations": {},
-  "editor.fontSize": 16
+  "editor.fontSize": 16,
+  "cSpell.userWords": ["dotfiles"],
+  "indentRainbow.excludedLanguages": ["clojure"],
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "calva.prettyPrintingOptions": {
+    "enabled": true,
+    "width": 120,
+    "maxLength": 50,
+    "printEngine": "pprint"
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "calva.fmt.experimental.inferParensAsYouType": true,
+  "calva.showDocstringInParameterHelp": true
 }
