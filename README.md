@@ -16,7 +16,7 @@ It targets Ubuntu and macOS systems. Last tested on Ubuntu 20.04 and macOS 10.15
 
 :warning: Don't just run these files without first reviewing the code and removing stuff you don't need/want. Running the installation script may break your system. Use at your own risk!
 
-The instalation is designed to be idempotent, meaning it can be run again.
+The installation is designed to be idempotent, meaning it can be run again.
 
 First **install all OS updates**.
 
@@ -98,4 +98,4 @@ Many thanks to the [dotfiles community](https://dotfiles.github.io).
 
 ### siege
 
-`siege --concurrent=1 --reps=10 --header="Cookie: sessionid=asdfasdf" "https://example.com`
+`siege --concurrent=1 --reps=10 --header="Cookie: sessionid=asdfasdf" https://example.com`
