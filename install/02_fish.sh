@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if is-macos; then
-  grep "/usr/local/bin/fish" /private/etc/shells &>/dev/null || sudo bash -c "echo /usr/local/bin/fish >> /private/etc/shells"
-  chsh -s /usr/local/bin/fish
+  grep "/opt/homebrew/bin/fish" /private/etc/shells &>/dev/null || sudo bash -c "echo /opt/homebrew/bin/fish >> /private/etc/shells"
+  chsh -s /opt/homebrew/bin/fish
 fi
 
 if is-ubuntu; then
@@ -11,7 +11,10 @@ fi
 
 # Fisher package manager
 if ! [ -f $HOME/.config/fish/functions/fisher.fish ]; then
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fi
 
 fish -c "fisher update"
+fish -c "fisher install jethrokuan/z"
+fish -c "fisher install rafaelrinaldi/pure"
+fish -c "fisher install franciscolourenco/done"

@@ -26,7 +26,6 @@ mkdir -p "$BACKUP_DEST"
 [ -f "$HOME/.gitconfig" ] && cp "$HOME/.gitconfig" "$BACKUP_DEST"
 [ -f "$HOME/.config/htop/htoprc" ] && cp "$HOME/.config/htop/htoprc" "$BACKUP_DEST"
 [ -f "$HOME/.config/fish/config.fish" ] && cp "$HOME/.config/fish/config.fish" "$BACKUP_DEST"
-[ -f "$HOME/.config/fish/fish_plugins" ] && cp "$HOME/.config/fish/fish_plugins" "$BACKUP_DEST"
 [ -f "$HOME/.screenrc" ] && cp "$HOME/.screenrc" "$BACKUP_DEST"
 [ -f "$HOME/Library/Application Support/Code/User/settings.json" ] && cp "$HOME/Library/Application Support/Code/User/settings.json" "$BACKUP_DEST"
 [ -f "$HOME/.config/Code/User/settings.json" ] && cp "$HOME/.config/Code/User/settings.json" "$BACKUP_DEST"
@@ -37,22 +36,13 @@ ln -sfv "$DOTFILES_DIR/configs/.gitconfig" "$HOME"
 
 mkdir -p "$HOME/.config/fish"
 ln -sfv "$DOTFILES_DIR/configs/config.fish" "$HOME/.config/fish"
-ln -sfv "$DOTFILES_DIR/configs/fish_plugins" "$HOME/.config/fish/fish_plugins"
 
 mkdir -p "$HOME/.config/htop"
 ln -sfv "$DOTFILES_DIR/configs/htoprc" "$HOME/.config/htop"
 
 if is-macos; then
-  mkdir -p "$HOME/Library/Application Support/Code/User"
-  ln -sfv "$DOTFILES_DIR/configs/vscode.json" "$HOME/Library/Application Support/Code/User/settings.json"
-
   mkdir -p "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
   ln -sfv "$DOTFILES_DIR/configs/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/"
-fi
-
-if is-ubuntu; then
-  mkdir -p "$HOME/.config/Code/User"
-  ln -sfv "$DOTFILES_DIR/configs/vscode.json" "$HOME/.config/Code/User/settings.json"
 fi
 
 ln -sfv "$DOTFILES_DIR/configs/.screenrc" "$HOME"

@@ -19,7 +19,6 @@ if is-macos; then
     spectacle
     spotify
     tunnelblick
-    virtualbox
     visual-studio-code
     vivaldi
   )

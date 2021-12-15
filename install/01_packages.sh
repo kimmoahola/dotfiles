@@ -2,8 +2,14 @@
 
 if is-macos; then
   if ! is-executable brew; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
+
+  # Brew to work in bash also
+  grep "/opt/homebrew/bin/brew shellenv" /Users/kimmo/.zprofile &>/dev/null || sudo bash -c "echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> /Users/kimmo/.zprofile"
+
+  # Brew to work in this run
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 
   brew update
   brew upgrade
@@ -129,4 +135,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
 
 # Poetry
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+curl -sSL https://install.python-poetry.org | python3 -

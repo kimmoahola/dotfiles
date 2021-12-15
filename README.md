@@ -43,11 +43,18 @@ Or, using wget:
 
     bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/kimmoahola/dotfiles/master/remote-install.sh`"
 
-### Add ssh key to github
+### After install tasks
 
-`cat $HOME/.ssh/id_ecdsa.pub`
-
-https://github.com/settings/keys
+- In .dotfiles dir
+  - `git init`
+  - `git remote add origin git@github.com:kimmoahola/dotfiles.git`
+- Add ssh key to github
+  `cat $HOME/.ssh/id_ecdsa.pub`
+  https://github.com/settings/keys
+- Setup Raycast app
+  - Disable Spotlight keyboard shortcuts
+  - Configure Raycast shortcut to cmd-space
+- Login to visual studio using github
 
 ### Add Fira Code font to editors
 

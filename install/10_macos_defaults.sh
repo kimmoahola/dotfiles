@@ -31,10 +31,10 @@ defaults write com.apple.sound.beep.feedback -bool false
 sudo nvram SystemAudioVolume=" "
 
 # Menu bar: disable transparency
-defaults write com.apple.universalaccess reduceTransparency -int 1
+sudo defaults write com.apple.universalaccess reduceTransparency -int 1
 
 # For example, remove motion from switching desktops
-defaults write com.apple.universalaccess reduceMotion -int 1
+sudo defaults write com.apple.universalaccess reduceMotion -int 1
 
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent YES
