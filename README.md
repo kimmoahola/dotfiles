@@ -55,6 +55,9 @@ Or, using wget:
   - Disable Spotlight keyboard shortcuts
   - Configure Raycast shortcut to cmd-space
 - Login to visual studio using github
+- Start Murus firewall
+- Start Maccy (and start it at boot)
+- Install https://vimacapp.com/ (and start it at boot)
 
 ### Add Fira Code font to editors
 
