@@ -2,7 +2,7 @@
 
 These are my dotfiles. Installation script will install various software and setup the shell to be my style. Also some Ubuntu and macOS settings are modified.
 
-It targets Ubuntu and macOS systems. Last tested on Ubuntu 20.04 and macOS 10.15.
+It targets Ubuntu and macOS systems. Last tested on Ubuntu 20.04 and macOS 12.1.
 
 ## Package overview
 
