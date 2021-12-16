@@ -32,6 +32,7 @@ if is-macos; then
     htop
     httpie
     jq
+    multitime
     nano
     peco
     screen
