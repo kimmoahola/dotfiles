@@ -34,6 +34,7 @@ if is-macos; then
     jq
     multitime
     nano
+    openjdk@17
     peco
     screen
     shellcheck
@@ -65,6 +66,8 @@ if is-macos; then
   export DOTFILES_BREW_PREFIX=`brew --prefix`
   set-config "DOTFILES_BREW_PREFIX" "$DOTFILES_BREW_PREFIX" "$DOTFILES_CACHE"
 
+  # For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 fi
 
 if is-ubuntu; then
