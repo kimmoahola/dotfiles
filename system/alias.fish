@@ -1,7 +1,5 @@
 # Shortcuts
 
-alias _="sudo"
-
 alias g="git"
 
 alias rr="rm -rf"
