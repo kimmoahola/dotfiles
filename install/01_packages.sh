@@ -18,6 +18,7 @@ if is-macos; then
 
   apps=(
     bat
+    clojure
     coreutils
     exa
     ffmpeg
