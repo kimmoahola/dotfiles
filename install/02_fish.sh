@@ -15,6 +15,3 @@ if ! [ -f $HOME/.config/fish/functions/fisher.fish ]; then
 fi
 
 fish -c "fisher update"
-fish -c "fisher install jethrokuan/z"
-fish -c "fisher install rafaelrinaldi/pure"
-fish -c "fisher install franciscolourenco/done"
