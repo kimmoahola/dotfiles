@@ -33,6 +33,7 @@ if is-macos; then
     htop
     httpie
     jq
+    just
     multitime
     nano
     node@18
