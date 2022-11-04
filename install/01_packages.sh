@@ -35,6 +35,7 @@ if is-macos; then
     jq
     multitime
     nano
+    node@18
     openjdk@17
     peco
     screen

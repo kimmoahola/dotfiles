@@ -35,12 +35,6 @@ function sub_update
     sudo apt-get autoremove --purge --assume-yes
   end
 
-  sep "Upgrading fnm"
-  curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
-
-  sep "Upgrading npm global packages"
-  npm update -g
-
   sep "Upgrading fisher and its packages"
   fisher update
 

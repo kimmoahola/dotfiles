@@ -16,6 +16,7 @@ prepend-path "/usr/local/sbin"
 prepend-path "$HOME/.poetry/bin"
 prepend-path "/opt/homebrew/opt/openjdk@17/bin"
 prepend-path "/opt/homebrew/bin"
+prepend-path "/opt/homebrew/opt/node@18/bin"
 
 set -g -x MANPATH \
   $DOTFILES_BREW_PREFIX_COREUTILS/libexec/gnuman \
