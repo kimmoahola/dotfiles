@@ -18,6 +18,7 @@ if is-macos; then
 
   apps=(
     bat
+    borkdude/brew/jet  # CLI to transform between JSON, EDN, YAML and Transit
     clojure
     coreutils
     exa
