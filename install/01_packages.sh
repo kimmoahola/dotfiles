@@ -35,6 +35,7 @@ if is-macos; then
     httpie
     jq
     just
+    lazygit
     multitime
     nano
     node@18
