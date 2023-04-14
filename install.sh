@@ -33,6 +33,7 @@ mkdir -p "$BACKUP_DEST"
 # Bunch of symlinks
 
 ln -sfv "$DOTFILES_DIR/configs/.gitconfig" "$HOME"
+ln -sfv "$DOTFILES_DIR/configs/.gitignore_global" "$HOME/.gitignore"
 
 mkdir -p "$HOME/.config/fish"
 ln -sfv "$DOTFILES_DIR/configs/config.fish" "$HOME/.config/fish"
