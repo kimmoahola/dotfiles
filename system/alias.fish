@@ -1,6 +1,7 @@
 # Shortcuts
 
 alias g="git"
+alias lg="lazygit"
 
 alias rr="rm -rf"
 
