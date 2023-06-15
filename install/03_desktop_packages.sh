@@ -10,6 +10,7 @@ if is-macos; then
     docker
     firefox
     font-fira-code
+    handbrake
     insomnia
     iterm2
     maccy
@@ -46,6 +47,7 @@ if is-ubuntu; then
     docker-ce-cli
     firefox
     fonts-firacode
+    handbrake
     virtualbox
   )
 
