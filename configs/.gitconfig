@@ -14,7 +14,7 @@
   ci = commit
   co = checkout
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  lp = log --graph --pretty=oneline --abbrev-commit --patch
+  lp = log --graph --abbrev-commit --patch
   patch = !git --no-pager diff --no-color
   p = push
   pf = push --force
