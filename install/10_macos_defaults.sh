@@ -55,9 +55,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
 defaults write bluetoothaudiod "Enable AptX codec" -bool true
 defaults write bluetoothaudiod "Enable AAC codec" -bool true
 
