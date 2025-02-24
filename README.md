@@ -1,53 +1,25 @@
-# My dotfiles
-
-These are my dotfiles. Installation script will install various software and setup the shell to be my style. Also some Ubuntu and macOS settings are modified.
-
-It targets Ubuntu and macOS systems. Last tested on Ubuntu 20.04 and macOS 12.1.
-
-## Package overview
-
-- Fish shell with [functions and aliases](system)
-- [Various system packages](install/01_packages.sh) installed with brew or apt-get
-- [Various npm packages](install/02_npm.sh)
-- [Various desktop packages](install/03_desktop_packages.sh)
-- [Configs for some programs](configs)
-
 ## Install
 
 :warning: Don't just run these files without first reviewing the code and removing stuff you don't need/want. Running the installation script may break your system. Use at your own risk!
 
 The installation is designed to be idempotent, meaning it can be run again.
 
-First **install all OS updates**.
-
-On a sparkling fresh installation of macOS
-
-    xcode-select --install
-
-Install font: Noto Mono Nerd Font Complete Mono from nerd-fonts at https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf
-
-Install the dotfiles with either Git or curl/wget:
-
-### Clone with Git
-
-    git clone git@github.com:kimmoahola/dotfiles.git ~/.dotfiles
-    bash ~/.dotfiles/install.sh
-
-### Remotely install using curl
-
-Alternatively, you can install this into `~/.dotfiles` remotely without Git using curl:
-
-    bash -c "`curl -fsSL https://raw.github.com/kimmoahola/dotfiles/master/remote-install.sh`"
-
-Or, using wget:
-
-    bash -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/kimmoahola/dotfiles/master/remote-install.sh`"
+1. Install all OS updates
+1. On Mac: `xcode-select --install`
+1. Install brew
+1. `brew install bash fish stow git` or `sudo apt-get --assume-yes install bash fish stow git`
+1. On Mac: `sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"`
+1. Make fish shell a default
+1. Install [fisher](https://github.com/jorgebucaran/fisher)
+1. `git clone git@github.com:kimmoahola/dotfiles.git ~/.dotfiles`
+1. `cd ~/.dotfiles`
+1. `stow -v 2 .`
+1. `./install.sh`
+1. Open up a new terminal (should open as a fish shell)
+1. `./post_install.fish`
 
 ### After install tasks
 
-- In .dotfiles dir
-  - `git init`
-  - `git remote add origin git@github.com:kimmoahola/dotfiles.git`
 - Add ssh key to github
   `cat $HOME/.ssh/id_ecdsa.pub`
   https://github.com/settings/keys
@@ -55,13 +27,8 @@ Or, using wget:
   - Disable Spotlight keyboard shortcuts
   - Configure Raycast shortcut to cmd-space
 - Login to visual studio using github
-- Start Murus firewall
 - Start Maccy (and start it at boot)
-- Install https://vimacapp.com/ (and start it at boot)
-
-### Add Fira Code font to editors
-
-Various instructions: https://github.com/tonsky/FiraCode#editor-support
+- Add 'Hack Nerd Font Mono', 'Comic sans MS' to editors and terminal
 
 ## The `dotfiles` command
 
@@ -73,15 +40,8 @@ Various instructions: https://github.com/tonsky/FiraCode#editor-support
     help             This help message
     update           Update packages and pkg managers (brew, brew cask, npm)
 
-## Customize/extend
-
-Custom installation step can be put into `$HOME/.dotfiles_extra/install.sh`. That will be sourced last in the installation.
-
-`$HOME/.dotfiles_extra/runcom/*.fish` will be sources from `config.fish`. You can put your custom settings, such as credentials in there.
-
 ## Upgrading to newer Ubuntu
 
-- Check that docker-ce is available for the newer Ubuntu.
 - Rename any 3rd party sources in `/etc/apt/sources.list` to point to the newer Ubuntu release.
 - After the upgrade, run install.sh and check the results.
 

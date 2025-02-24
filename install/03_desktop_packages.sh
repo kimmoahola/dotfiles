@@ -2,29 +2,27 @@
 
 if is-macos; then
   brew tap buo/cask-upgrade
-  brew tap homebrew/cask-fonts
 
   # Install packages
 
   apps=(
-    docker
     firefox
-    font-fira-code
+    font-hack-nerd-font
     handbrake
     insomnia
     iterm2
     maccy
-    murus
+    orbstack
     raycast
-    skitch
-    spectacle
     spotify
-    tunnelblick
+    stats
+    tabby
     visual-studio-code
-    vivaldi
   )
 
-  brew install --cask "${apps[@]}"
+  for app in "${apps[@]}"; do
+    brew info --cask "${app}" | grep "Not installed" &>/dev/null && brew install --cask "${app}"
+  done
 fi
 
 if is-ubuntu; then
@@ -46,7 +44,6 @@ if is-ubuntu; then
     docker-ce
     docker-ce-cli
     firefox
-    fonts-firacode
     handbrake
     virtualbox
   )

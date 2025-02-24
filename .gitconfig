@@ -3,7 +3,7 @@
   email = 28525546+kimmoahola@users.noreply.github.com
 
 [core]
-  editor = code --wait --new-window
+  editor = nvim
   filemode = false
   trustctime = false
   autocrlf = input
@@ -100,3 +100,6 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+
+[rebase]
+	updateRefs = true

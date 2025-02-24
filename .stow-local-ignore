@@ -1,0 +1,8 @@
+\.git
+^/README.*
+.editorconfig
+.stowrc
+/bin
+/install
+/install.sh
+/post_install.fish

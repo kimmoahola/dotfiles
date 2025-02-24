@@ -20,9 +20,6 @@ end
 
 function sub_update
   if is-macos
-    sep "Updating brew"
-    brew update
-
     sep "Upgrading brew packages"
     brew upgrade
 
@@ -38,19 +35,8 @@ function sub_update
   sep "Upgrading fisher and its packages"
   fisher update
 
-  sep "Upgrading poetry"
-  poetry self update
-
   sep "Upgrading pyenv"
   pyenv update
-
-  sep "Stuff needing a manual check for updates"
-  echo "Check updates for these and if an update is available, you should modify the installation scripts to install the new version:"
-  echo "- global python version at https://www.python.org/downloads/"
-  echo "- global node version at https://nodejs.org/en/about/releases/"
-  if is-ubuntu
-    echo "- docker-compose at https://github.com/docker/compose/releases"
-  end
 
   sep "Now refresh by opening a new shell"
 end

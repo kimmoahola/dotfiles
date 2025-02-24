@@ -1,3 +1,8 @@
-.cache.fish
-/backup/
-.idea
+/.calva
+kimmon*
+
+.config/fish/completions
+.config/fish/functions
+.config/fish/conf.d
+.config/fish/fish_plugins
+.config/fish/fish_variables
