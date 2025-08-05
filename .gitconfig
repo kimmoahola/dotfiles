@@ -3,7 +3,7 @@
   email = 28525546+kimmoahola@users.noreply.github.com
 
 [core]
-  editor = nvim
+  editor = nano
   filemode = false
   trustctime = false
   autocrlf = input
