@@ -10,6 +10,7 @@ if is-macos; then
     colima
     coreutils
     curl
+    direnv
     docker
     docker-buildx
     docker-compose
@@ -19,6 +20,7 @@ if is-macos; then
     ffmpeg
     findutils
     fish
+    fnm
     git-delta
     git-extras
     gnu-sed

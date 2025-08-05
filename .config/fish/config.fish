@@ -5,6 +5,9 @@ if not status is-interactive
   exit
 end
 
+# Suppress fish greeting
+set -g fish_greeting
+
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles)
 
 if test -d $HOME/.dotfiles
@@ -83,7 +86,6 @@ prepend-path "$HOME/bin"
 prepend-path "/sbin"
 prepend-path "/usr/sbin"
 prepend-path "/usr/local/sbin"
-prepend-path "/opt/homebrew/opt/openjdk@17/bin"
 prepend-path "/opt/homebrew/bin"
 prepend-path "/opt/homebrew/opt/node@20/bin"
 prepend-path "/opt/homebrew/opt/curl/bin"
@@ -193,4 +195,8 @@ if is-macos
 end
 
 starship init fish | source
+
+direnv hook fish | source
+
+fnm env --use-on-cd --version-file-strategy=recursive --shell fish | source
 

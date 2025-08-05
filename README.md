@@ -78,6 +78,10 @@ Many thanks to the [dotfiles community](https://dotfiles.github.io).
 1. If everything looks ok:
 1. `stow -v 2 .`
 
+### List installed via brew
+
+`brew list --installed-on-request`
+
 ### siege
 
 `siege --concurrent=1 --reps=10 --header="Cookie: sessionid=asdfasdf" https://example.com`
