@@ -10,7 +10,7 @@ if is-macos; then
     font-hack-nerd-font
     handbrake
     insomnia
-    iterm2
+    kitty
     maccy
     raycast
     spotify
