@@ -34,8 +34,6 @@ if is-macos; then
     lazygit
     multitime
     nano
-    node@20
-    openjdk@17
     peco
     screen
     shellcheck
