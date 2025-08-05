@@ -7,8 +7,13 @@ if is-macos; then
     bat
     borkdude/brew/jet  # CLI to transform between JSON, EDN, YAML and Transit
     clojure
+    colima
     coreutils
     curl
+    docker
+    docker-buildx
+    docker-compose
+    docker-credential-helper
     entr
     eza
     ffmpeg
@@ -46,8 +51,8 @@ if is-macos; then
 
   brew cleanup
 
-  # For the system Java wrappers to find this JDK, symlink it with
-  sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+  ln -svf /opt/homebrew/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+  ln -svf /opt/homebrew/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
 fi
 
 if is-ubuntu; then

@@ -64,7 +64,19 @@ The installation is designed to be idempotent, meaning it can be run again.
 
 Many thanks to the [dotfiles community](https://dotfiles.github.io).
 
+## Stuff that does not work
+
+- Symlinking karabiner does not work https://github.com/pqrs-org/Karabiner-Elements/issues/3248
+
 ## "Manual"
+
+### Add new config directory to stow
+
+1. `mv ~/.config/kitty ~/.dotfiles/.config/`
+1. `cd ~/.dotfiles`
+1. `stow --simulate -v 2 .`
+1. If everything looks ok:
+1. `stow -v 2 .`
 
 ### siege
 

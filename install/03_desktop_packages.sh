@@ -12,7 +12,6 @@ if is-macos; then
     insomnia
     iterm2
     maccy
-    orbstack
     raycast
     spotify
     stats

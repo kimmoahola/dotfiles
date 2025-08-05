@@ -13,6 +13,9 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Make utilities available
 PATH="$DOTFILES_DIR/bin:$PATH"
 
+# For desktop apps to find tools installed by brew (For example openlens to find kubectl)
+sudo bash -c "echo /opt/homebrew/bin > /etc/paths.d/homebrew"
+
 for file in "$DOTFILES_DIR"/install/*; do
   . $file
 done
