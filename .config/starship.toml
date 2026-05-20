@@ -13,6 +13,7 @@ $time\
 [ ](fg:surface0)\
 $python\
 $cmd_duration\
+$fill\
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -44,6 +45,10 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[fill]
+symbol = '·'
+style = 'surface1'
 
 [directory]
 style = "fg:mantle bg:peach"
@@ -84,7 +89,7 @@ style = "bg:peach"
 format = '[[  $time ](fg:mantle bg:surface0)]($style)'
 
 [python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = '[${symbol}(${version} )(\($virtualenv\) )]($style)'
 
 [line_break]
 disabled = false

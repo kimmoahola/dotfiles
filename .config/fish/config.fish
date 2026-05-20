@@ -115,6 +115,9 @@ set -x -g EDITOR "nano"
 
 set -x -g XDG_CONFIG_HOME "$HOME/.config"
 
+# Misc
+
+set -x -g KUBECTL_EXTERNAL_DIFF "dyff between --omit-header --set-exit-code"
 
 # Shortcuts
 
@@ -123,12 +126,16 @@ alias lg="lazygit"
 
 alias rr="rm -rf"
 
+alias k="kubectl"
+alias kctx="kubectx"
+
 # Default options
 
 alias rsync="rsync -vh"
 alias json="json -c"
 alias psgrep="psgrep -i"
 alias less="less -R"
+alias grep="grep --color=always"
 
 # Directory listing/traversal
 
