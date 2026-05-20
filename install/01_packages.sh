@@ -16,10 +16,10 @@ if is-macos; then
     docker-credential-helper
     entr
     eza
+    fd
     ffmpeg
     findutils
     fish
-    fnm
     git-delta
     git-extras
     gnu-sed
@@ -39,12 +39,12 @@ if is-macos; then
     shellcheck
     siege
     ssh-copy-id
-    TomAnthony/brews/itermocil
+    stern
     tree
     unar
     watch
     wget
-    zlib  # for pyenv to be able to build python versions
+    zoxide
   )
 
   brew install "${apps[@]}"

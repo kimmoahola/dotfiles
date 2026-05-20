@@ -9,14 +9,12 @@ if is-macos; then
     firefox
     font-hack-nerd-font
     handbrake
-    insomnia
     kitty
     maccy
     raycast
-    spotify
     stats
-    tabby
     visual-studio-code
+    yaak
   )
 
   for app in "${apps[@]}"; do

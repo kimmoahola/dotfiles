@@ -52,18 +52,18 @@ function clean-docker
 end
 
 # Fuzzy find file/dir
-function ff
-  find . -type f -iname "$argv"
-end
-function fff
-  find . -type f -iname "*$argv*"
-end
-function fd
-  find . -type d -iname "$argv"
-end
-function fdf
-  find . -type d -iname "*$argv*"
-end
+# function ff
+#   find . -type f -iname "$argv"
+# end
+# function fff
+#   find . -type f -iname "*$argv*"
+# end
+# function fd
+#   find . -type d -iname "$argv"
+# end
+# function fdf
+#   find . -type d -iname "*$argv*"
+# end
 
 
 # Prepend new items to path (if directory exists)
@@ -131,6 +131,8 @@ alias psgrep="psgrep -i"
 alias less="less -R"
 
 # Directory listing/traversal
+
+alias cd="z"
 
 alias l="eza --long --header --git --classify --icons --group-directories-first --binary"
 alias la="l --all"
