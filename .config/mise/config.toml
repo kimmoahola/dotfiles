@@ -1,0 +1,6 @@
+[settings]
+idiomatic_version_file_enable_tools = ["java", "node"]
+
+[tools]
+go = "latest"
+node = "25"

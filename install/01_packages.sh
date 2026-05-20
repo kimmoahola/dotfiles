@@ -10,7 +10,6 @@ if is-macos; then
     colima
     coreutils
     curl
-    direnv
     docker
     docker-buildx
     docker-compose
@@ -32,6 +31,7 @@ if is-macos; then
     jq
     just
     lazygit
+    mise
     multitime
     nano
     peco
@@ -90,22 +90,6 @@ if is-ubuntu; then
     tree
     unar
     wget
-
-    # These packages are for pyenv to be able to build python versions
-    libbz2-dev
-    libffi-dev
-    liblzma-dev
-    libncurses5-dev
-    libncursesw5-dev
-    libreadline-dev
-    libsqlite3-dev
-    libssl-dev
-    llvm
-    make
-    python-openssl
-    tk-dev
-    xz-utils
-    zlib1g-dev
   )
 
   sudo apt-get update
@@ -114,10 +98,3 @@ if is-ubuntu; then
     sudo apt-get --assume-yes install "${app}"
   done
 fi
-
-# pyenv
-if ! [ -d "$HOME/.pyenv" ]; then
-  curl https://pyenv.run | bash
-fi
-export PYENV_ROOT="$HOME/.pyenv"
-PATH="$PYENV_ROOT/bin:$PATH"

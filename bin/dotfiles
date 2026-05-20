@@ -32,12 +32,6 @@ function sub_update
     sudo apt-get autoremove --purge --assume-yes
   end
 
-  sep "Upgrading fisher and its packages"
-  fisher update
-
-  sep "Upgrading pyenv"
-  pyenv update
-
   sep "Now refresh by opening a new shell"
 end
 
@@ -60,4 +54,3 @@ switch $COMMAND_NAME
   case clean
     sub_clean
 end
-

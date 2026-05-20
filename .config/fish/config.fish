@@ -162,24 +162,9 @@ alias week="date +%V"
 alias psql='env PAGER="less -S" psql'
 
 
-set -x PYENV_ROOT $HOME/.pyenv
-prepend-path "$PYENV_ROOT/bin"
-
-if status is-interactive
-  pyenv init --path | source
-  pyenv init - | source
-end
-
 if is-macos
-  # For pyenv to be able to build python versions
-  set -x -g LDFLAGS "-L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl/lib" $LDFLAGS
-  set -x -g CPPFLAGS "-I/usr/local/opt/zlib/include -I/usr/local/opt/openssl/include" $CPPFLAGS
+  set -x -g CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include" $CPPFLAGS
 end
-
-set -x -g CPPFLAGS "-I/opt/homebrew/opt/openjdk@17/include" $CPPFLAGS
-
-
-
 
 if is-macos
   # Raise limit for open files and processes
@@ -196,7 +181,11 @@ end
 
 starship init fish | source
 
-direnv hook fish | source
+#direnv hook fish | source
 
-fnm env --use-on-cd --version-file-strategy=recursive --shell fish | source
+zoxide init fish | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/kimmo/.lmstudio/bin
+# End of LM Studio CLI section
 

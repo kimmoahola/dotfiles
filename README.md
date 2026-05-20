@@ -10,7 +10,6 @@ The installation is designed to be idempotent, meaning it can be run again.
 1. `brew install bash fish stow git` or `sudo apt-get --assume-yes install bash fish stow git`
 1. On Mac: `sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"`
 1. Make fish shell a default
-1. Install [fisher](https://github.com/jorgebucaran/fisher)
 1. `git clone git@github.com:kimmoahola/dotfiles.git ~/.dotfiles`
 1. `cd ~/.dotfiles`
 1. `stow -v 2 .`
