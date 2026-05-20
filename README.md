@@ -84,3 +84,17 @@ Many thanks to the [dotfiles community](https://dotfiles.github.io).
 ### siege
 
 `siege --concurrent=1 --reps=10 --header="Cookie: sessionid=asdfasdf" https://example.com`
+
+### psql
+
+`docker run -it --rm postgres:17-alpine psql -h host.docker.internal -U dbuser -d dbname`
+
+## Backups
+
+List archives: `borgmatic list`
+
+Extract archive to /tmp: `borgmatic extract --archive KimmoA-macbook-2026-04-10T08:55:22 --destination /tmp`
+
+Largest files on latest archive: `borgmatic list --format '{size:>12} {path}{NL}' --archive latest | sort -rn | head -40`
+
+Delete archive: `borgmatic delete --archive KimmoA-macbook-2026-04-21T09:45:39`
